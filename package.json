@@ -1,0 +1,38 @@
+{
+  "name": "staycart",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.10",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "autoprefixer": "^10.4.21",
+    "framer-motion": "^12.38.0",
+    "maath": "^0.10.8",
+    "next": "15.3.3",
+    "next-seo": "^7.2.0",
+    "postcss": "^8.5.6",
+    "react": "^19.0.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^5.6.0",
+    "react-intersection-observer": "^10.0.3",
+    "swiper": "^12.1.4",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/three": "^0.184.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.3",
+    "tailwindcss": "^3.4.1"
+  }
+}

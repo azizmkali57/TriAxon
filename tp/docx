@@ -1,0 +1,69 @@
+app/
+    layout.jsx # Root layout (fonts, metadata, analytics)
+    page.jsx # Homepage (/)
+    about/page.jsx
+    services/
+            page.jsx
+            fullstack/page.jsx
+            app-development/page.jsx
+            digital-marketing/page.jsx
+            ui-ux-design/page.jsx
+            cloud-devops/page.jsx
+            ai-ml/page.jsx
+    portfolio/
+            page.jsx
+            [slug]/page.jsx # Case study detail
+    blog/
+        page.jsx
+        [slug]/page.jsx
+    careers/page.jsx
+    contact/page.jsx
+    sitemap.js
+    robojs.js
+
+components/
+   three/ 
+    HeroCanvas.jsx
+    ParticleField.jsx
+    GlobeScene.jsx
+
+   layout/
+    Navbar.jsx
+    Footer.jsx
+    MobileMenu.jsx
+
+   pages/
+     home/
+        HeroSection.jsx
+        ServicesGrid.jsx
+        StatsCounter.jsx
+        TestimonialsSlider.jsx
+        TechStack.jsx
+        ProcessTimeline.jsx
+        PortfolioGrid.jsx
+        CTABanner.jsx
+        ContactSection.jsx
+        WhyusSection.jsx
+        AoutSection.jsx
+        BlogSection.jsx
+        
+    ui/
+        Button.jsx
+        Badge.jsx
+        Card.jsx
+        GradientText.jsx
+        SectionWrapper.jsx
+
+
+seo/
+   JsonLd.jsx
+
+lib/
+   constants.js
+   metadata.js
+   utils.js
+
+hooks/
+   useScrollAnimation.js
+   useCountUp.js
+   usePrefersReducedMotion.js
