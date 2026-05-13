@@ -3,6 +3,7 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import SectionWrapper, { SectionHeader } from "@/components/ui/SectionWrapper";
 import { useState } from "react";
+import Link from "next/link";
 
 const categories = ["All", "Web App", "Mobile", "AI/ML", "Enterprise"];
 
@@ -151,9 +152,11 @@ export default function PortfolioGrid() {
       </div>
 
       <div className="text-center mt-12 reveal">
+        <Link href="/portfolio">
         <Button variant="outline" size="lg">
           View Full Portfolio →
         </Button>
+        </Link>
       </div>
     </SectionWrapper>
   );

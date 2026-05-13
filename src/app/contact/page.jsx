@@ -151,9 +151,32 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("loading");
-    // TODO: replace with your actual submission endpoint (Resend, Formspree, etc.)
-    await new Promise((r) => setTimeout(r, 1400));
+
+    // Build a formatted WhatsApp message from the form data
+    const budgetLabel = budgets.find((b) => b.value === form.budget)?.label || form.budget || "Not specified";
+
+    const message =
+      ` *New Project Inquiry — TriAxon Technologies*\n\n` +
+      ` *Name:* ${form.name}\n` +
+      ` *Email:* ${form.email}\n` +
+      ` *Phone:* ${form.phone || "Not provided"}\n` +
+      ` *Company:* ${form.company || "Not provided"}\n\n` +
+      ` *Service Needed:* ${form.service || "Not specified"}\n` +
+      ` *Budget:* ${budgetLabel}\n` +
+      ` *Timeline:* ${form.timeline || "Not specified"}\n\n` +
+      ` *Project Description:*\n${form.message}\n\n` +
+      ` *How they found us:* ${form.how || "Not specified"}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/919039290553?text=${encodedMessage}`;
+
+    // Simulate a brief loading state before redirecting
+    await new Promise((r) => setTimeout(r, 800));
+
     setStatus("success");
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
   };
 
   return (

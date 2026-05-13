@@ -21,7 +21,7 @@ const services = [
     badge: "Most Popular",
   },
   {
-    href:  "./services/app-development",
+    href:  "/services/app-developement",
     title: "Mobile App Development",
     short: "Flutter · React Native · Swift",
     desc:  "Native-quality iOS and Android apps that users love. 4.8★ average rating across 30+ apps launched on both stores.",
@@ -31,7 +31,7 @@ const services = [
     badge: null,
   },
   {
-    href:  "./services/ui-ux-design",
+    href:  "/services/ui-ux-design",
     title: "UI/UX Design",
     short: "Figma · Design Systems · Prototypes",
     desc:  "User-centred interfaces that convert. We design for delight, accessibility, and business outcomes — not just aesthetics.",
@@ -41,7 +41,7 @@ const services = [
     badge: null,
   },
   {
-    href:  "/services/cloud-devops",
+    href:  "/services/cloud-deveops",
     title: "Cloud & DevOps",
     short: "AWS · Docker · Kubernetes",
     desc:  "Reliable, auto-scaling infrastructure with zero-downtime deployments. We architect for the traffic you'll have tomorrow.",

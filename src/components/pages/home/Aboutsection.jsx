@@ -1,65 +1,130 @@
 "use client";
+
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 
-const GlobeScene = dynamic(() => import("@/components/three/GlobeScene"), { ssr: false });
-
 const team = [
-  { name: "Aziz Ali", role: "Co-Founder & CTO", avatar: "AA", color: "bg-[#2B7EC1]/20 text-[#79b8f0]" },
-  { name: "Ruqaiya", role: "Social Media Manager", avatar: "RT", color: "bg-[#6B3FA0]/20 text-[#b392d8]" },
-  { name: "Amaan Husain", role: "Project Manager", avatar: "AH", color: "bg-[#00B4C8]/20 text-[#00B4C8]" },
-  { name: "Mustafa Fakhri", role: "Design Lead", avatar: "MF", color: "bg-emerald-500/20 text-emerald-400" },
+  {
+    name: "Aziz Ali",
+    role: "Co-Founder & CTO",
+  },
+  {
+    name: "Ruqaiya",
+    role: "Social Media Manager",
+  },
+  {
+    name: "Amaan Husain",
+    role: "Project Manager",
+  },
+  {
+    name: "Mustafa Fakhri",
+    role: "Design Lead",
+  },
 ];
 
 const values = [
-  { emoji: "🎯", label: "User-First" },
-  { emoji: "🚀", label: "Ship Fast" },
-  { emoji: "🔍", label: "Quality" },
-  { emoji: "🤝", label: "Transparent" },
+  "User-First",
+  "Ship Fast",
+  "Quality",
+  "Transparent",
 ];
 
 export default function AboutSection() {
   return (
     <SectionWrapper id="about" dark>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        
+
+        {/* Left Content */}
         <div>
-          <h2 className="text-4xl text-white mb-6">
-            Built by Engineers, <span className="text-cyan-400">Run for Founders</span>
+          <h2 className="text-4xl text-white mb-6 leading-tight">
+            Built by Engineers,{" "}
+            <span className="text-cyan-400">
+              Run for Founders
+            </span>
           </h2>
 
-          <p className="text-gray-400 mb-4">
-            TriAxon Technologies was founded in Indore in 2022 by engineers frustrated with poor delivery quality.
+          <p className="text-gray-400 mb-4 leading-relaxed">
+            TriAxon Technologies was founded in Indore in 2022 by engineers
+            frustrated with poor delivery quality and slow execution.
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-6">
-            {values.map((v) => (
-              <div key={v.label} className="px-3 py-2 bg-white/5 rounded-lg text-white text-sm">
-                {v.emoji} {v.label}
+          <p className="text-gray-400 mb-8 leading-relaxed">
+            We focus on building scalable digital products, modern user
+            experiences, and reliable systems that help startups and businesses
+            grow faster.
+          </p>
+
+          {/* Values */}
+          <div className="flex flex-wrap gap-3 mb-8">
+            {values.map((value) => (
+              <div
+                key={value}
+                className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white"
+              >
+                {value}
               </div>
             ))}
           </div>
 
           <Link href="#contact">
-            <Button>Work With Us</Button>
+            <Button>
+              Work With Us
+            </Button>
           </Link>
         </div>
 
-        <div className="flex flex-col items-center gap-8">
-          <GlobeScene size={320} color="#2B7EC1" accentColor="#00B4C8" speed={1.2} />
+        {/* Right Side */}
+        <div className="flex flex-col gap-6">
 
-          <div className="grid grid-cols-2 gap-3 w-full">
+          {/* Main Card */}
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0B1220] to-[#111827] p-8">
+            
+            <div className="absolute top-0 left-0 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full" />
+            <div className="absolute bottom-0 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full" />
+
+            <div className="relative z-10">
+              <div className="text-sm uppercase tracking-[0.2em] text-cyan-400 mb-3">
+                About TriAxon
+              </div>
+
+              <h3 className="text-2xl text-white font-semibold mb-4">
+                Building Modern Digital Experiences
+              </h3>
+
+              <p className="text-gray-400 leading-relaxed">
+                We combine design, engineering, and strategy to create products
+                that are fast, scalable, and visually impactful.
+              </p>
+            </div>
+          </div>
+
+          {/* Team Grid */}
+          <div className="grid grid-cols-2 gap-4">
             {team.map((member) => (
-              <div key={member.name} className="p-3 bg-white/5 rounded-lg">
-                <div className="text-white font-semibold">{member.name}</div>
-                <div className="text-gray-400 text-xs">{member.role}</div>
+              <div
+                key={member.name}
+                className="p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/[0.07] transition-colors"
+              >
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center text-white font-semibold mb-3">
+                  {member.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                </div>
+
+                <div className="text-white font-medium">
+                  {member.name}
+                </div>
+
+                <div className="text-gray-400 text-sm mt-1">
+                  {member.role}
+                </div>
               </div>
             ))}
           </div>
-        </div>
 
+        </div>
       </div>
     </SectionWrapper>
   );

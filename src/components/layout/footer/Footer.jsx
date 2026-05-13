@@ -26,18 +26,18 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-[#9CA3AF]">
               <p>triaxontechnologies57@gmail.com</p>
               <p>+91 90392 90553</p>
-              <p>Indore, India</p>
+              <p>Khatiwala Tank Indore, India 452014</p>
             </div>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-[#9CA3AF]">
-              <li><Link href="#">Web Development</Link></li>
-              <li><Link href="#">Mobile Apps</Link></li>
-              <li><Link href="#">Cloud & DevOps</Link></li>
-              <li><Link href="#">AI & ML</Link></li>
-              <li><Link href="#">UI/UX Design</Link></li>
+              <li><Link href="/services/fullstack">Web Development</Link></li>
+              <li><Link href="/services/app-developement">Mobile Apps</Link></li>
+              <li><Link href="/services/cloud-deveops">Cloud & DevOps</Link></li>
+              <li><Link href="/services/ai-ml">AI & ML</Link></li>
+              <li><Link href="/services/ui-ux-design">UI/UX Design</Link></li>
             </ul>
           </div>
 
@@ -45,11 +45,10 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-[#9CA3AF]">
-              <li><Link href="#">About</Link></li>
-              <li><Link href="#">Team</Link></li>
-              <li><Link href="#">Careers</Link></li>
-              <li><Link href="#">Blog</Link></li>
-              <li><Link href="#">Contact</Link></li>
+              <li><Link href="#about">About</Link></li>
+               <li><Link href="/services">services</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
 
@@ -93,4 +92,3 @@ export default function Footer() {
     </footer>
   );
 }
-

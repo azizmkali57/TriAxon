@@ -113,9 +113,12 @@ export default function BlogSection() {
       </div>
 
       <div className="text-center reveal">
+        <Link href="/blog">
         <Button variant="outline" size="lg">
           Read All Articles →
         </Button>
+        </Link>
+        
       </div>
     </SectionWrapper>
   );
