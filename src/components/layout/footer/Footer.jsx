@@ -12,7 +12,7 @@ export default function Footer() {
 
           <div className="lg:col-span-2">
             <Image
-              src="/public/triaxon1.png"
+              src="/logo.png"
               alt="Company Logo"
               width={140}
               height={40}
@@ -49,6 +49,7 @@ export default function Footer() {
               <li><Link href="#">Team</Link></li>
               <li><Link href="#">Careers</Link></li>
               <li><Link href="#">Blog</Link></li>
+              <li><Link href="#">Contact</Link></li>
             </ul>
           </div>
 

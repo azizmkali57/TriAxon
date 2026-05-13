@@ -10,7 +10,7 @@ const team = [
   { name: "Aziz Ali", role: "Co-Founder & CTO", avatar: "AA", color: "bg-[#2B7EC1]/20 text-[#79b8f0]" },
   { name: "Ruqaiya", role: "Social Media Manager", avatar: "RT", color: "bg-[#6B3FA0]/20 text-[#b392d8]" },
   { name: "Amaan Husain", role: "Project Manager", avatar: "AH", color: "bg-[#00B4C8]/20 text-[#00B4C8]" },
-  { name: "Mustafa Fakhri", role: "", avatar: "MF", color: "bg-emerald-500/20 text-emerald-400" },
+  { name: "Mustafa Fakhri", role: "Design Lead", avatar: "MF", color: "bg-emerald-500/20 text-emerald-400" },
 ];
 
 const values = [

@@ -38,7 +38,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <Image
-              src="/public/triaxon1.png"
+              src="/logo.png"
               alt="TriAxon Technologies"
               width={140}
               height={40}
@@ -61,7 +61,7 @@ export default function Navbar() {
 
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
-            <Link href="#contact" className="hidden sm:block">
+            <Link href="/contact" className="hidden sm:block">
               <Button variant="outline" size="sm">
                 Contact Us
               </Button>
