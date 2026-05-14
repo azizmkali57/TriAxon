@@ -35,7 +35,7 @@ export default function AboutSection() {
     <SectionWrapper id="about" dark>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        {/* Left Content */}
+        {}
         <div>
           <h2 className="text-4xl text-white mb-6 leading-tight">
             Built by Engineers,{" "}
@@ -55,7 +55,7 @@ export default function AboutSection() {
             grow faster.
           </p>
 
-          {/* Values */}
+          {}
           <div className="flex flex-wrap gap-3 mb-8">
             {values.map((value) => (
               <div
@@ -74,10 +74,10 @@ export default function AboutSection() {
           </Link>
         </div>
 
-        {/* Right Side */}
+        {}
         <div className="flex flex-col gap-6">
 
-          {/* Main Card */}
+          {}
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0B1220] to-[#111827] p-8">
             
             <div className="absolute top-0 left-0 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full" />
@@ -99,7 +99,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Team Grid */}
+          {}
           <div className="grid grid-cols-2 gap-4">
             {team.map((member) => (
               <div
