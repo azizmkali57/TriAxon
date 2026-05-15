@@ -18,7 +18,7 @@ const blogs = [
     authorRole: "CTO",
     date: "Jan 12, 2026",
     readTime: "6 min read",
-    imageSrc: "/site/img1.jpeg",
+    imageSrc: "/site/agentic_ai.jpeg",
   },
   {
     category: "Artificial Intelligence",
@@ -30,7 +30,7 @@ const blogs = [
     authorRole: "CTO",
     date: "Jan 18, 2026",
     readTime: "7 min read",
-    imageSrc: "/site/img2.jpeg",
+    imageSrc: "/site/Multiagent_AI.jpeg",
   },
   {
     category: "Connectivity",
@@ -42,7 +42,7 @@ const blogs = [
     authorRole: "CTO",
     date: "Jan 25, 2026",
     readTime: "5 min read",
-    imageSrc: "/site/img3.jpeg",
+    imageSrc: "/site/6G_connectivity.jpeg",
   },
 ];
 

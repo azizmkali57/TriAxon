@@ -86,7 +86,7 @@ export default function AppDevPage() {
         </div>
       </section>
 
-      {/* Platforms */}
+      {}
       <section className="py-24 bg-[#0A1628]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -106,7 +106,7 @@ export default function AppDevPage() {
         </div>
       </section>
 
-      {/* App Types */}
+      {}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -125,7 +125,7 @@ export default function AppDevPage() {
         </div>
       </section>
 
-      {/* Features */}
+      {}
       <section className="py-24 bg-[#0A1628]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
@@ -145,7 +145,7 @@ export default function AppDevPage() {
         </div>
       </section>
 
-      {/* Case Studies */}
+      {}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

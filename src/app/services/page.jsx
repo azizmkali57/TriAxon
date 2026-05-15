@@ -1,5 +1,4 @@
 import Link from "next/link";
-// import navbar from "@/components/layout/header/Navbar";
 import Footer from "@/components/layout/footer/Footer";
 import Navbar from "@/components/layout/header/Navbar";
 
@@ -85,7 +84,7 @@ export default function ServicesPage() {
     <main className="bg-[#0D1117] min-h-screen">
       <Navbar />
 
-      {/* ── HERO ─────────────────────────────────── */}
+      {}
       <section className="relative pt-36 pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(107,63,160,0.15),transparent)]" />
         <div className="dot-pattern absolute inset-0 opacity-30" />
@@ -105,13 +104,13 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── SERVICE CARDS ────────────────────────── */}
+      {}
       <section className="pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s) => (
             <Link key={s.href} href={s.href} className="group block">
               <div className={`relative h-full rounded-2xl border border-white/[0.07] bg-white/[0.02] p-7 overflow-hidden ${s.border} hover:-translate-y-1.5 transition-all duration-300`}>
-                {/* Gradient blob */}
+                {}
                 <div className={`absolute inset-0 bg-gradient-to-br ${s.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
                 <div className="relative">
                   {s.badge && (
@@ -141,7 +140,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── ENGAGEMENT PROCESS ───────────────────── */}
+      {}
       <section className="py-24 bg-[#0A1628]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -167,7 +166,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── CTA ──────────────────────────────────── */}
+      {}
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-display font-bold text-4xl text-white mb-4">Not Sure Which Service You Need?</h2>

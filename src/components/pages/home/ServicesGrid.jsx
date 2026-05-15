@@ -101,7 +101,7 @@ export default function ServicesGrid() {
                 {service.description}
               </p>
 
-              {/* Features */}
+              {}
               <ul className="space-y-2">
                 {service.features.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-sm text-[#9CA3AF]">

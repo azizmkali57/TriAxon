@@ -28,7 +28,7 @@ export default function Card({
         ${className}
       `}
     >
-      {/* Subtle top gradient */}
+      {}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#2B7EC1]/30 to-transparent" />
       {children}
     </div>

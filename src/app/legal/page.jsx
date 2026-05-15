@@ -139,7 +139,7 @@ export default function LegalHubPage() {
       style={{ backgroundColor: "var(--dark-900)", color: "var(--text-primary)" }}
       className="min-h-screen font-body relative overflow-hidden"
     >
-      {/* Background mesh */}
+      {}
       <div
         className="pointer-events-none absolute inset-0 z-0"
         style={{
@@ -148,7 +148,7 @@ export default function LegalHubPage() {
         }}
       />
 
-      {/* Dot pattern */}
+      {}
       <div
         className="pointer-events-none absolute inset-0 z-0 opacity-40"
         style={{
@@ -159,14 +159,14 @@ export default function LegalHubPage() {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-24 md:py-32">
-        {/* Breadcrumb */}
+        {}
         <nav className="mb-10 flex items-center gap-2 text-sm" style={{ color: "var(--text-muted)" }}>
           <Link href="/" className="hover:text-[#00B4C8] transition-colors">Home</Link>
           <span>/</span>
           <span style={{ color: "var(--text-secondary)" }}>Legal</span>
         </nav>
 
-        {/* Header */}
+        {}
         <div className="mb-16 text-center">
           <span
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium mb-6 font-mono tracking-wider uppercase"
@@ -207,7 +207,7 @@ export default function LegalHubPage() {
           </p>
         </div>
 
-        {/* Cards grid */}
+        {}
         <div className="grid sm:grid-cols-2 gap-5">
           {LEGAL_CARDS.map((card) => {
             const c = colorMap[card.color];
@@ -221,7 +221,7 @@ export default function LegalHubPage() {
                   border: `1px solid ${c.border}`,
                 }}
               >
-                {/* Glow on hover via pseudo — done with inline style trick */}
+                {}
                 <div
                   className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
@@ -230,7 +230,7 @@ export default function LegalHubPage() {
                 />
 
                 <div className="relative z-10">
-                  {/* Icon */}
+                  {}
                   <div
                     className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4 ${c.icon}`}
                     style={{ background: c.bg }}
@@ -251,7 +251,7 @@ export default function LegalHubPage() {
                       </p>
                     </div>
 
-                    {/* Arrow */}
+                    {}
                     <div
                       className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1 transition-transform duration-300 group-hover:translate-x-1 ${c.icon}`}
                       style={{ background: c.bg }}
@@ -283,7 +283,7 @@ export default function LegalHubPage() {
           })}
         </div>
 
-        {/* Contact note */}
+        {}
         <div
           className="mt-14 text-center p-6 rounded-2xl"
           style={{

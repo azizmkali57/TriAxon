@@ -41,7 +41,7 @@ export default function FullStackPage() {
   return (
     <main className="bg-[#0D1117] min-h-screen">
 
-      {/* ── HERO ─────────────────────────────────── */}
+      {}
       <section className="relative pt-36 pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(43,126,193,0.2),transparent)]" />
         <div className="grid-pattern absolute inset-0 opacity-30" />
@@ -88,7 +88,7 @@ export default function FullStackPage() {
         </div>
       </section>
 
-      {/* ── WHAT WE BUILD ────────────────────────── */}
+      {}
       <section className="py-24 bg-[#0A1628]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -107,7 +107,7 @@ export default function FullStackPage() {
         </div>
       </section>
 
-      {/* ── TECH STACK ───────────────────────────── */}
+      {}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -129,7 +129,7 @@ export default function FullStackPage() {
         </div>
       </section>
 
-      {/* ── CASE STUDIES ─────────────────────────── */}
+      {}
       <section className="py-24 bg-[#0A1628]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -150,7 +150,7 @@ export default function FullStackPage() {
         </div>
       </section>
 
-      {/* ── DELIVERABLES ─────────────────────────── */}
+      {}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
@@ -172,7 +172,7 @@ export default function FullStackPage() {
         </div>
       </section>
 
-      {/* ── CTA ──────────────────────────────────── */}
+      {}
       <section className="py-24 bg-[#0A1628]">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-display font-bold text-4xl text-white mb-4">Ready to Build Your Web App?</h2>

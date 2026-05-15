@@ -182,7 +182,7 @@ export default function TermsOfServicePage() {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-24 md:py-32">
-        {/* Breadcrumb */}
+        {}
         <nav className="mb-10 flex items-center gap-2 text-sm" style={{ color: "var(--text-muted)" }}>
           <Link href="/" className="hover:text-[#00B4C8] transition-colors">Home</Link>
           <span>/</span>
@@ -191,7 +191,7 @@ export default function TermsOfServicePage() {
           <span style={{ color: "var(--text-secondary)" }}>Terms of Service</span>
         </nav>
 
-        {/* Header */}
+        {}
         <div
           className="rounded-2xl p-8 md:p-10 mb-10 relative overflow-hidden"
           style={{
@@ -237,7 +237,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
 
-        {/* Table of contents */}
+        {}
         <div
           className="rounded-2xl p-6 mb-10"
           style={{ background: "var(--surface-card)", border: "1px solid var(--surface-border)" }}
@@ -260,7 +260,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
 
-        {/* Sections */}
+        {}
         <div className="space-y-10">
           {SECTIONS.map((section) => (
             <section key={section.id} id={section.id} className="scroll-mt-24">
@@ -300,7 +300,7 @@ export default function TermsOfServicePage() {
           ))}
         </div>
 
-        {/* Footer nav */}
+        {}
         <div
           className="mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
           style={{ borderTop: "1px solid var(--surface-border)" }}

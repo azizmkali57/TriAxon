@@ -7,17 +7,67 @@ import Link from "next/link";
 
 const categories = ["All", "Web App", "Mobile", "AI/ML", "Enterprise", "Design"];
 
-const projects = [
-  { slug: "finedge-dashboard",    title: "FinEdge Dashboard",    category: "Web App",    industry: "Fintech",       emoji: "📈", result: "40% engagement ↑",   stack: ["Next.js", "Python", "PostgreSQL"],        duration: "14 weeks", gradient: "from-[#2B7EC1]/30 to-[#0A1628]", desc: "Real-time trading dashboard for a London fintech with live portfolio analytics, risk scoring, and regulatory reporting." },
-  { slug: "logiflow-mobile",      title: "LogiFlow Mobile",      category: "Mobile",     industry: "Logistics",     emoji: "🚚", result: "50K+ DAU",            stack: ["Flutter", "Node.js", "Firebase"],         duration: "18 weeks", gradient: "from-[#6B3FA0]/30 to-[#0A1628]", desc: "B2B logistics tracking app for 200+ drivers with offline-first sync, real-time GPS, and automated invoicing." },
-  { slug: "healthbridge-ai",      title: "HealthBridge AI",      category: "AI/ML",      industry: "HealthTech",    emoji: "🏥", result: "92% AI Accuracy",     stack: ["Python", "FastAPI", "OpenAI", "React"],   duration: "22 weeks", gradient: "from-[#00B4C8]/30 to-[#0A1628]", desc: "HIPAA-compliant telemedicine with AI symptom checker, video consultations, and automated prescriptions." },
-  { slug: "edutrack-lms",         title: "EduTrack LMS",         category: "Web App",    industry: "EdTech",        emoji: "📚", result: "7× faster loads",     stack: ["Next.js", "Supabase", "Stripe"],          duration: "10 weeks", gradient: "from-emerald-600/25 to-[#0A1628]", desc: "Full-featured LMS migrated from legacy PHP. 300% user growth in 6 months after relaunch." },
-  { slug: "retailmax-commerce",   title: "RetailMax Commerce",   category: "Enterprise", industry: "Retail",        emoji: "🛒", result: "$5M+ GMV",            stack: ["React", "Node.js", "AWS", "Redis"],       duration: "28 weeks", gradient: "from-amber-600/25 to-[#0A1628]", desc: "Enterprise e-commerce handling millions in GMV. Survived Black Friday at 10× normal traffic with zero downtime." },
-  { slug: "smarthr-automator",    title: "SmartHR Automator",    category: "AI/ML",      industry: "HRTech",        emoji: "👥", result: "60% faster onboarding", stack: ["Vue 3", "Django", "GPT-4"],             duration: "16 weeks", gradient: "from-[#6B3FA0]/25 to-[#0A1628]", desc: "AI-powered HR automation reducing onboarding time through intelligent document processing and workflows." },
-  { slug: "payzap-wallet",        title: "PayZap Wallet",        category: "Mobile",     industry: "Fintech",       emoji: "💳", result: "₹50Cr/mo processed",  stack: ["React Native", "Node.js", "Stripe"],      duration: "20 weeks", gradient: "from-[#2B7EC1]/25 to-[#0A1628]", desc: "Digital wallet app with UPI, cards, bill payments, and investment features. 4.7★ on both stores." },
-  { slug: "nexacrm-platform",     title: "NexaCRM Platform",     category: "Enterprise", industry: "SaaS B2B",      emoji: "🏢", result: "5000+ active seats",  stack: ["Next.js", "NestJS", "PostgreSQL"],        duration: "32 weeks", gradient: "from-[#00B4C8]/25 to-[#0A1628]", desc: "Full-featured CRM built for mid-market B2B companies — pipeline, contacts, deals, and email sequences." },
-  { slug: "insightai-analytics",  title: "InsightAI Analytics",  category: "AI/ML",      industry: "Analytics",     emoji: "📊", result: "3× faster insights",  stack: ["Python", "LangChain", "React", "Spark"],  duration: "14 weeks", gradient: "from-[#6B3FA0]/25 to-[#0A1628]", desc: "Natural language analytics platform that lets business users query their data in plain English." },
-  { slug: "designsystem-healthco",title: "HealthCo Design System",category: "Design",    industry: "HealthTech",    emoji: "🎨", result: "60% faster design",   stack: ["Figma", "Storybook", "React"],            duration: "8 weeks",  gradient: "from-pink-600/25 to-[#0A1628]", desc: "Complete design system with 200+ Figma components and React implementation for a healthcare SaaS." },
+const portfolios = [
+  {
+    slug: "timecraft-product-page",
+    title: "TimeCraft Watch Store",
+    category: "Landing Page",
+    industry: "E-Commerce",
+    imageSrc: "/site/TimeCrafts_Watch.jpeg",
+    result: "43% conversion ↑",
+    stack: ["Next.js", "Tailwind CSS", "Shopify", "Figma"],
+    duration: "3 weeks",
+    gradient: "from-[#C8A96E]/30 to-[#1A1208]",
+    desc: "Elegant product landing page for a premium watch brand — warm beige aesthetic with live pricing, spec tables, star-rated testimonials, and a high-converting sticky CTA section."
+  },
+  {
+    slug: "trailmate-storefront",
+    title: "TrailMate Adventure Store",
+    category: "Landing Page",
+    industry: "Outdoor & Lifestyle",
+   imageSrc: "/site/Tailmate.jpeg",
+    result: "38% add-to-cart ↑",
+    stack: ["React", "Tailwind CSS", "Shopify", "Vercel"],
+    duration: "4 weeks",
+    gradient: "from-[#3A5A40]/30 to-[#0D1F0F]",
+    desc: "Adventure-themed product storefront for an outdoor backpack brand — cinematic hero with mountain imagery, feature grids, detailed spec tables, and a trust-building social proof section."
+  },
+  {
+    slug: "startx-saas-platform",
+    title: "StartX SaaS Platform",
+    category: "Web App",
+    industry: "SaaS / Startup",
+    imageSrc: "/site/StartX.jpeg",
+    result: "2,000+ signups/month",
+    stack: ["React", "Node.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
+    duration: "12 weeks",
+    gradient: "from-[#2563EB]/30 to-[#0F172A]",
+    desc: "Full-featured SaaS website for a startup launchpad — tiered pricing cards, feature showcases, brand trust logos, customer testimonials, and a newsletter-powered conversion footer."
+  },
+  {
+    slug: "brewtiful-cafe-website",
+    title: "Brewtiful Café Website",
+    category: "Business Website",
+    industry: "Food & Beverage",
+   imageSrc: "/site/Brewtiful_coffee.jpeg",
+    result: "55% online orders ↑",
+    stack: ["Next.js", "Sanity CMS", "Tailwind CSS", "Stripe"],
+    duration: "5 weeks",
+    gradient: "from-[#7B4A2D]/30 to-[#1C0F07]",
+    desc: "Warm artisan-styled website for a specialty coffee brand — interactive menu cards, online ordering integration, 10% discount email capture, and a brand-rich storytelling footer."
+  },
+  {
+    slug: "soundcore-product-page",
+    title: "SoundCore Earbuds Page",
+    category: "Landing Page",
+    industry: "Consumer Electronics",
+   imageSrc: "/site/Earbud_page.jpeg",
+    result: "51% CTR on Buy Now",
+    stack: ["Next.js", "GSAP", "Tailwind CSS", "Shopify"],
+    duration: "6 weeks",
+    gradient: "from-[#C8962E]/30 to-[#0A0A0A]",
+    desc: "Dark-luxury product page for a premium wireless earbuds brand — immersive black-and-gold hero, animated spec reveals, ENC feature highlights, and a bold gold sticky buy CTA."
+  }
 ];
 
 const badgeColors = {

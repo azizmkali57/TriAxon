@@ -9,7 +9,6 @@ export default function HeroCanvas() {
     const canvas = mountRef.current;
     if (!canvas) return;
 
-    // Renderer
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setClearColor(0x0d1117, 1);

@@ -7,15 +7,15 @@ export default function CTABanner() {
   return (
     <SectionWrapper className="py-16">
       <div className="reveal relative rounded-3xl overflow-hidden border border-[#2B7EC1]/30">
-        {/* Gradient background */}
+        {}
         <div className="absolute inset-0 bg-gradient-to-r from-[#2B7EC1]/20 via-[#6B3FA0]/20 to-[#00B4C8]/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(43,126,193,0.15),transparent_70%)]" />
 
-        {/* Animated border shimmer */}
+        {}
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#2B7EC1] to-transparent opacity-60" />
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#00B4C8] to-transparent opacity-60" />
 
-        {/* Content */}
+        {}
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 px-8 py-14 sm:px-12">
           <div className="text-center lg:text-left max-w-xl">
             <div className="inline-flex items-center gap-2 mb-4">

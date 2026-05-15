@@ -366,7 +366,7 @@ export default function CareersPage() {
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={() => { setSelectedJob(null); setApplyStatus("idle"); }} />
           <div className="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl border border-white/[0.12] bg-[#0A1628] shadow-2xl">
 
-            {/* Modal header */}
+            {}
             <div className="sticky top-0 flex items-start justify-between gap-4 px-7 py-5 border-b border-white/[0.07] bg-[#0A1628]/95 backdrop-blur-sm">
               <div>
                 <h2 className="font-display font-bold text-2xl text-white">{selectedJob.title}</h2>
@@ -420,7 +420,7 @@ export default function CareersPage() {
                     </ul>
                   </div>
 
-                  {/* Application form */}
+                  {}
                   <div className="pt-2 border-t border-white/[0.07]">
                     <h3 className="font-display font-bold text-xl text-white mb-5">Apply for This Role</h3>
                     <form onSubmit={handleApply} className="space-y-4">

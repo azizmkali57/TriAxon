@@ -390,7 +390,6 @@ print(result.to_pandas())`,
   },
 ];
 
-/* ─── Sub-components ─── */
 
 function TableOfContents({ content }) {
   const headings = content.filter((b) => b.type === "h2");
@@ -467,8 +466,6 @@ function ContentBlock({ block, headingIndex }) {
   }
 }
 
-/* ─── Page ─── */
-
 export default function BlogPostPage({ params }) {
   const { slug } = params;
   const post = allPosts.find((p) => p.slug === slug);
@@ -485,20 +482,19 @@ export default function BlogPostPage({ params }) {
 
   const relatedPosts = [...related, ...fallbackRelated].slice(0, 2);
 
-  /* Track heading index for IDs */
   let h2Count = -1;
 
   return (
     <main className="bg-[#0D1117] min-h-screen">
       <Navbar />
 
-      {/* Hero */}
+      {}
       <section className="relative pt-36 pb-14 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(43,126,193,0.12),transparent)]" />
         <div className="dot-pattern absolute inset-0 opacity-20" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-          {/* Breadcrumb */}
+          {}
           <nav className="flex items-center gap-2 text-sm text-[#4A6080] mb-8">
             <Link href="/" className="hover:text-[#9CA3AF] transition-colors">Home</Link>
             <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" /></svg>
@@ -507,7 +503,7 @@ export default function BlogPostPage({ params }) {
             <span className="text-[#9CA3AF] truncate max-w-[200px]">{post.title}</span>
           </nav>
 
-          {/* Category + Meta */}
+          {}
           <div className="flex flex-wrap items-center gap-3 mb-6">
             <span className={`text-xs px-2.5 py-1 rounded-full border ${categoryColors[post.category]}`}>
               {post.category}
@@ -517,17 +513,17 @@ export default function BlogPostPage({ params }) {
             <span className="text-xs text-[#4A6080]">{post.readTime}</span>
           </div>
 
-          {/* Title */}
+          {}
           <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-white leading-[1.1] mb-6">
             {post.title}
           </h1>
 
-          {/* Excerpt */}
+          {}
           <p className="text-[#9CA3AF] text-lg leading-relaxed mb-8 max-w-2xl">
             {post.excerpt}
           </p>
 
-          {/* Author */}
+          {}
           <div className="flex items-center gap-3 pt-6 border-t border-white/[0.06]">
             <div className="w-10 h-10 rounded-xl bg-[#2B7EC1]/20 text-[#79b8f0] flex items-center justify-center text-sm font-bold">
               {post.author.avatar}
@@ -540,17 +536,17 @@ export default function BlogPostPage({ params }) {
         </div>
       </section>
 
-      {/* Emoji banner */}
+      {}
       <div className="border-y border-white/[0.05] bg-white/[0.01] py-10 mb-14 flex items-center justify-center">
         <span className="text-[7rem] opacity-40">{post.emoji}</span>
       </div>
 
-      {/* Article body */}
+      {}
       <section className="pb-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-12 items-start">
 
-            {/* Content */}
+            {}
             <article className="min-w-0">
               {post.content.map((block, i) => {
                 if (block.type === "h2") h2Count++;
@@ -559,7 +555,7 @@ export default function BlogPostPage({ params }) {
                 );
               })}
 
-              {/* Bottom author card */}
+              {}
               <div className="mt-16 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-6 flex items-center gap-5">
                 <div className="w-14 h-14 rounded-xl bg-[#2B7EC1]/20 text-[#79b8f0] flex items-center justify-center text-lg font-bold flex-shrink-0">
                   {post.author.avatar}
@@ -579,7 +575,7 @@ export default function BlogPostPage({ params }) {
               </div>
             </article>
 
-            {/* Sidebar */}
+            {}
             <aside className="hidden lg:block">
               <TableOfContents content={post.content} />
             </aside>
@@ -587,7 +583,7 @@ export default function BlogPostPage({ params }) {
         </div>
       </section>
 
-      {/* Related Posts */}
+      {}
       {relatedPosts.length > 0 && (
         <section className="py-20 bg-[#0A1628] border-t border-white/[0.05]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -615,7 +611,7 @@ export default function BlogPostPage({ params }) {
         </section>
       )}
 
-      {/* Newsletter */}
+      {}
       <section className="py-20 border-t border-white/[0.05]">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2 className="font-display font-bold text-3xl text-white mb-3">Stay in the Loop</h2>

@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-// import ParticleField from "@/components/three/ParticleField";
 import dynamic from "next/dynamic";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 

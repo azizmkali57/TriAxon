@@ -139,7 +139,7 @@ export default function ContactPage() {
     message: "",
     how: "",
   });
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [status, setStatus] = useState("idle"); 
   const [openFaq, setOpenFaq] = useState(null);
 
   const handleChange = (e) =>
@@ -152,7 +152,6 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus("loading");
 
-    // Build a formatted WhatsApp message from the form data
     const budgetLabel = budgets.find((b) => b.value === form.budget)?.label || form.budget || "Not specified";
 
     const message =
@@ -170,12 +169,10 @@ export default function ContactPage() {
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/919039290553?text=${encodedMessage}`;
 
-    // Simulate a brief loading state before redirecting
     await new Promise((r) => setTimeout(r, 800));
 
     setStatus("success");
 
-    // Open WhatsApp in a new tab
     window.open(whatsappUrl, "_blank");
   };
 
@@ -333,7 +330,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Phone + Company */}
+                {}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-medium text-[#9CA3AF] mb-2">

@@ -121,7 +121,7 @@ export default function CookiePolicyPage() {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-24 md:py-32">
-        {/* Breadcrumb */}
+        {}
         <nav className="mb-10 flex items-center gap-2 text-sm" style={{ color: "var(--text-muted)" }}>
           <Link href="/" className="hover:text-[#00B4C8] transition-colors">Home</Link>
           <span>/</span>
@@ -130,7 +130,7 @@ export default function CookiePolicyPage() {
           <span style={{ color: "var(--text-secondary)" }}>Cookie Policy</span>
         </nav>
 
-        {/* Header */}
+        {}
         <div
           className="rounded-2xl p-8 md:p-10 mb-10 relative overflow-hidden"
           style={{
@@ -178,7 +178,7 @@ export default function CookiePolicyPage() {
           </div>
         </div>
 
-        {/* Table of contents */}
+        {}
         <div
           className="rounded-2xl p-6 mb-10"
           style={{ background: "var(--surface-card)", border: "1px solid var(--surface-border)" }}
@@ -201,7 +201,7 @@ export default function CookiePolicyPage() {
           </div>
         </div>
 
-        {/* Sections */}
+        {}
         <div className="space-y-10">
           {SECTIONS.map((section) => (
             <section key={section.id} id={section.id} className="scroll-mt-24">
@@ -220,7 +220,7 @@ export default function CookiePolicyPage() {
                       className="rounded-xl overflow-hidden"
                       style={{ border: "1px solid var(--surface-border)", background: "var(--surface-card)" }}
                     >
-                      {/* Cookie type header */}
+                      {}
                       <div
                         className="px-5 py-4 flex items-center justify-between"
                         style={{ borderBottom: "1px solid var(--surface-border)", background: "rgba(255,255,255,0.02)" }}
@@ -245,7 +245,7 @@ export default function CookiePolicyPage() {
                         </span>
                       </div>
 
-                      {/* Cookie table */}
+                      {}
                       <div className="overflow-x-auto">
                         <table className="w-full text-sm">
                           <thead>
@@ -315,7 +315,7 @@ export default function CookiePolicyPage() {
           ))}
         </div>
 
-        {/* Footer nav */}
+        {}
         <div
           className="mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
           style={{ borderTop: "1px solid var(--surface-border)" }}

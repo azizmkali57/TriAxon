@@ -128,7 +128,7 @@ export default function ProcessTimeline() {
 
       <div className="relative">
 
-        {/* Center Line */}
+        {}
         <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2" />
 
         <div className="space-y-10">
@@ -145,7 +145,7 @@ export default function ProcessTimeline() {
                 }`}
               >
 
-                {/* Card */}
+                {}
                 <div className="flex-1">
                   <div
                     className={`relative rounded-3xl border ${step.border} ${step.bg} p-6 lg:p-8 backdrop-blur-sm ${
@@ -153,7 +153,7 @@ export default function ProcessTimeline() {
                     }`}
                   >
 
-                    {/* Header */}
+                    {}
                     <div className="flex items-start gap-4 mb-5">
 
                       <div
@@ -181,12 +181,12 @@ export default function ProcessTimeline() {
                       </div>
                     </div>
 
-                    {/* Description */}
+                    {}
                     <p className="text-[#9CA3AF] text-sm leading-relaxed mb-5">
                       {step.description}
                     </p>
 
-                    {/* Deliverables */}
+                    {}
                     <div className="flex flex-wrap gap-2">
                       {step.deliverables.map((item) => (
                         <span
@@ -200,14 +200,14 @@ export default function ProcessTimeline() {
                   </div>
                 </div>
 
-                {/* Timeline Dot */}
+                {}
                 <div className="hidden lg:flex relative z-10 items-center justify-center w-5 h-5 rounded-full border-2 border-white/20 bg-[#0A1628]">
                   <div
                     className={`w-2.5 h-2.5 rounded-full ${step.bg}`}
                   />
                 </div>
 
-                {/* Empty Side */}
+                {}
                 <div className="hidden lg:block flex-1" />
               </div>
             );

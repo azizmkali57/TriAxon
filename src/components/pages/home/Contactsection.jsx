@@ -91,7 +91,7 @@ export default function ContactSection() {
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
-        {/* Contact Info */}
+        {}
         <div className="lg:col-span-2 space-y-5 reveal">
           {contactInfo.map((info) => (
             <div key={info.label} className="flex items-start gap-4">
@@ -120,7 +120,7 @@ export default function ContactSection() {
             </div>
           ))}
 
-          {/* WhatsApp CTA */}
+          {}
           <a
             href="https://wa.me/919039290553"
             target="_blank"
@@ -160,7 +160,7 @@ export default function ContactSection() {
           </a>
         </div>
 
-        {/* Form */}
+        {}
         <Card className="lg:col-span-3 reveal" padding="lg">
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
