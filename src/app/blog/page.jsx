@@ -4,32 +4,187 @@ import Footer from "@/components/layout/footer/Footer";
 import Link from "next/link";
 
 const featured = {
-  slug:    "trpc-nextjs-app-router",
-  title:   "Why We Moved All Client Projects from REST to tRPC + Next.js App Router",
-  excerpt: "After 12+ projects, we made the full switch. Here's what we learned — including surprising performance wins and the DX improvements that convinced our whole team.",
+  slug:     "trpc-nextjs-app-router",
+  title:    "Why We Moved All Client Projects from REST to tRPC + Next.js App Router",
+  excerpt:  "After 12+ projects, we made the full switch. Here's what we learned — including surprising performance wins and the DX improvements that convinced our whole team.",
   category: "Development",
   author:   { name: "Rahul Verma", role: "CTO", avatar: "RV" },
   date:     "Apr 28, 2025",
   readTime: "7 min read",
-  emoji:    "⚛️",
+  imageSrc: "",
 };
 
 const posts = [
-  { slug: "flutter-vs-react-native-2025", title: "Flutter vs React Native in 2025: A Decision Framework for Startups", excerpt: "We've shipped 20+ mobile apps. This is the honest, framework-agnostic guide we wish we'd had — with real benchmarks.", category: "Mobile",      author: { name: "Karan Singh",  avatar: "KS" }, date: "Apr 15, 2025", readTime: "9 min",  emoji: "📱" },
-  { slug: "rag-production-lessons",        title: "Building Production RAG Pipelines: Lessons from 5 Deployments",    excerpt: "RAG sounds simple in demos. In production, it's a different story. Embedding choices, chunking strategies, and eval frameworks.", category: "AI/ML",       author: { name: "Priya Joshi",  avatar: "PJ" }, date: "Mar 30, 2025", readTime: "11 min", emoji: "🤖" },
-  { slug: "nextjs-performance-checklist",  title: "The 2025 Next.js Performance Checklist (From Real Project Audits)", excerpt: "12 performance wins we apply to every new project — with before/after Core Web Vitals numbers from real client sites.", category: "Development", author: { name: "Rahul Verma",  avatar: "RV" }, date: "Mar 12, 2025", readTime: "8 min",  emoji: "⚡" },
-  { slug: "aws-cost-optimisation",         title: "How We Cut AWS Bills by 40% for 3 Clients in 60 Days",            excerpt: "The common waste patterns we find in almost every cloud audit, and the exact steps we take to eliminate them.", category: "DevOps",      author: { name: "Karan Singh",  avatar: "KS" }, date: "Feb 28, 2025", readTime: "6 min",  emoji: "☁️" },
-  { slug: "figma-design-system-workflow",  title: "The Design System Workflow That Scales Across 10+ Client Projects", excerpt: "How we structure Figma files, component libraries, and token handoffs so every client gets a consistent, maintainable design system.", category: "Design",      author: { name: "Anjali Patel", avatar: "AP" }, date: "Feb 10, 2025", readTime: "7 min",  emoji: "🎨" },
-  { slug: "mvp-launch-playbook",           title: "The TriAxon MVP Launch Playbook: 0 to Production in 8 Weeks",      excerpt: "The exact process we use to take a founder's idea from a napkin sketch to a live, paying-customer-ready product.", category: "Product",     author: { name: "Neha Sharma",  avatar: "NS" }, date: "Jan 22, 2025", readTime: "10 min", emoji: "🚀" },
+  // { slug: "flutter-vs-react-native-2025",      
+  //   title: "Flutter vs React Native in 2025: A Decision Framework for Startups",          
+  //   excerpt: "We've shipped 20+ mobile apps. This is the honest, framework-agnostic guide we wish we'd had — with real benchmarks.",                                                                                          category: "Mobile",          author: { name: "Karan Singh",  avatar: "KS" }, date: "Apr 15, 2025", readTime: "9 min",  emoji: "📱" },
+  
+  { slug: "rag-production-lessons",             
+    title: "Building Production RAG Pipelines: Lessons from 5 Deployments",               
+    excerpt: "RAG sounds simple in demos. In production, it's a different story. Embedding choices, chunking strategies, and eval frameworks.",                                                                      
+    category: "AI/ML",           
+    author: { name: "Priya Joshi",  avatar: "PJ" }, 
+    date: "Mar 30, 2025", 
+    readTime: "11 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "nextjs-performance-checklist",       
+    title: "The 2025 Next.js Performance Checklist (From Real Project Audits)",           
+    excerpt: "12 performance wins we apply to every new project — with before/after Core Web Vitals numbers from real client sites.",                                                                             
+    category: "Development",     
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Mar 12, 2025", 
+    readTime: "8 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "aws-cost-optimisation",              
+    title: "How We Cut AWS Bills by 40% for 3 Clients in 60 Days",                       
+    excerpt: "The common waste patterns we find in almost every cloud audit, and the exact steps we take to eliminate them.",                                                                                    
+    category: "DevOps",          
+    author: { name: "Karan Singh",  avatar: "KS" }, 
+    date: "Feb 28, 2025", 
+    readTime: "6 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "figma-design-system-workflow",       
+    title: "The Design System Workflow That Scales Across 10+ Client Projects",          
+    excerpt: "How we structure Figma files, component libraries, and token handoffs so every client gets a consistent, maintainable design system.",                                                             
+    category: "Design",          
+    author: { name: "Anjali Patel", avatar: "AP" }, 
+    date: "Feb 10, 2025", 
+    readTime: "7 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "mvp-launch-playbook",                
+    title: "The TriAxon MVP Launch Playbook: 0 to Production in 8 Weeks",                
+    excerpt: "The exact process we use to take a founder's idea from a napkin sketch to a live, paying-customer-ready product.",                                                                             
+    category: "Product",         
+    author: { name: "Neha Sharma",  avatar: "NS" }, 
+    date: "Jan 22, 2025", 
+    readTime: "10 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "agentic-ai-acts-not-talks",          
+    title: "Agentic AI — The AI That Acts, Not Just Talks",                              
+    excerpt: "AI agents are evolving beyond chatbots. From booking travel to fixing code and running research autonomously, Agentic AI is redefining how businesses automate complex workflows in 2026.",      
+    category: "AI",              
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Jan 12, 2026", 
+    readTime: "6 min",
+    imageSrc:"/site/img1.jpeg" ,
+  },
+  
+    { slug: "multi-agent-ai-systems",             
+    title: "Multi-Agent AI Systems",                                                     
+    excerpt: "Multi-agent AI systems allow specialized AI agents to collaborate on tasks, bringing better scalability, coordination, and automation to enterprise workflows.",                                     
+    category: "AI",              
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Jan 18, 2026", 
+    readTime: "7 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "6g-connectivity-beyond-5g",          
+    title: "6G Connectivity — Beyond 5G",                                               
+    excerpt: "6G is set to revolutionize wireless communication with ultra-low latency, AI-driven networking, and hyper-connected digital ecosystems far beyond what 5G can offer.",                          
+    category: "Connectivity",    
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Jan 25, 2026", 
+    readTime: "5 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "cloud-3-hybrid-multicloud",          
+    title: "Cloud 3.0 — Hybrid, Multi-Cloud & Sovereign Architectures",                 
+    excerpt: "Cloud 3.0 introduces resilient hybrid and sovereign cloud strategies, enabling enterprises to scale AI workloads securely while reducing dependency on single providers.",                          
+    category: "Cloud",           
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Feb 2, 2026",  
+    readTime: "8 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "preemptive-cybersecurity-ai",        
+    title: "Preemptive Cybersecurity (AI-Powered Defense)",                             
+    excerpt: "Cybersecurity is becoming proactive. AI-powered defense systems now predict and neutralize digital threats before they strike, changing the future of enterprise security.",                          
+    category: "Cybersecurity",   
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Feb 10, 2026", 
+    readTime: "6 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "physical-ai-robotics",               
+    title: "Physical AI & Robotics",                                                    
+    excerpt: "Physical AI is bringing intelligence into robots, drones, and industrial systems, allowing machines to operate autonomously in dynamic real-world environments.",                                   
+    category: "Robotics",        
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Feb 18, 2026", 
+    readTime: "7 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "space-computing-frontier",           
+    title: "Space as a Computing Frontier",                                             
+    excerpt: "Space-based computing is emerging as the next frontier for AI infrastructure, offering superior cooling, energy efficiency, and entirely new possibilities for data centers.",                  
+    category: "Space Tech",      
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Feb 25, 2026", 
+    readTime: "5 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "confidential-computing-privacy",     
+    title: "Confidential Computing & Data Privacy",                                     
+    excerpt: "Confidential computing secures sensitive data even while it's actively being processed, enabling safer AI adoption and compliance in an increasingly regulated world.",                          
+    category: "Data Privacy",    
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Mar 4, 2026",  
+    readTime: "6 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "green-ai-sustainable-tech",          
+    title: "Green AI / Sustainable Tech (ESG + AI)",                                    
+    excerpt: "Organizations are shifting toward energy-efficient AI models and sustainable technology strategies, balancing innovation with environmental responsibility and ESG goals.",                           
+    category: "Sustainability",  
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Mar 12, 2026", 
+    readTime: "7 min",
+    imageSrc:"" ,
+  },
+  
+    { slug: "ai-native-software-development",     
+    title: "AI-Native Software Development",                                            
+    excerpt: "Software development is transitioning from manual coding to AI-native workflows, where developers express intent and AI systems autonomously build and maintain applications.",                  
+    category: "Development",     
+    author: { name: "Rahul Verma",  avatar: "RV" }, 
+    date: "Mar 20, 2026", 
+    readTime: "8 min",
+    imageSrc:"" ,
+  },
 ];
 
 const categoryColors = {
-  "Development": "bg-[#2B7EC1]/15 text-[#79b8f0] border-[#2B7EC1]/25",
-  "Mobile":      "bg-[#6B3FA0]/15 text-[#b392d8] border-[#6B3FA0]/25",
-  "AI/ML":       "bg-[#00B4C8]/15 text-[#00B4C8] border-[#00B4C8]/25",
-  "DevOps":      "bg-amber-500/15 text-amber-300 border-amber-500/25",
-  "Design":      "bg-pink-500/15  text-pink-300  border-pink-500/25",
-  "Product":     "bg-emerald-500/15 text-emerald-300 border-emerald-500/25",
+  "Development":  "bg-[#2B7EC1]/15 text-[#79b8f0] border-[#2B7EC1]/25",
+  "Mobile":       "bg-[#6B3FA0]/15 text-[#b392d8] border-[#6B3FA0]/25",
+  "AI/ML":        "bg-[#00B4C8]/15 text-[#00B4C8] border-[#00B4C8]/25",
+  "AI":           "bg-[#00B4C8]/15 text-[#00B4C8] border-[#00B4C8]/25",
+  "DevOps":       "bg-amber-500/15 text-amber-300 border-amber-500/25",
+  "Design":       "bg-pink-500/15  text-pink-300  border-pink-500/25",
+  "Product":      "bg-emerald-500/15 text-emerald-300 border-emerald-500/25",
+  "Connectivity": "bg-blue-500/15 text-blue-300 border-blue-500/25",
+  "Cloud":        "bg-cyan-500/15 text-cyan-300 border-cyan-500/25",
+  "Cybersecurity":"bg-red-500/15 text-red-300 border-red-500/25",
+  "Robotics":     "bg-orange-500/15 text-orange-300 border-orange-500/25",
+  "Space Tech":   "bg-slate-500/15 text-slate-300 border-slate-500/25",
+  "Data Privacy": "bg-emerald-500/15 text-emerald-300 border-emerald-500/25",
+  "Sustainability":"bg-green-500/15 text-green-300 border-green-500/25",
 };
 
 export default function BlogPage() {
@@ -55,6 +210,7 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* FEATURED */}
       <section className="pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href={`/blog/${featured.slug}`} className="group block">
@@ -91,9 +247,11 @@ export default function BlogPage() {
           </Link>
         </div>
       </section>
+
+      {/* ALL ARTICLES */}
       <section className="pb-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display font-bold text-2xl text-white mb-8">Recent Articles</h2>
+          <h2 className="font-display font-bold text-2xl text-white mb-8">All Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
@@ -123,6 +281,7 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* NEWSLETTER */}
       <section className="py-20 bg-[#0A1628] border-t border-white/[0.05]">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2 className="font-display font-bold text-3xl text-white mb-3">Stay in the Loop</h2>
@@ -135,6 +294,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+
       <Footer />
     </main>
   );
