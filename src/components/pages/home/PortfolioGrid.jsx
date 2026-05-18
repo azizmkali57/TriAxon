@@ -9,64 +9,40 @@ const categories = ["All", "Web App", "Mobile", "AI/ML", "Enterprise"];
 
 const projects = [
   {
-    title: "FinEdge Dashboard",
+    slug: "timecraft-product-page",
+    title: "TimeCraft Watch Store",
+    category: "Landing Page",
+    industry: "E-Commerce",
+    imageSrc: "/site/watchproject.jpeg",
+    result: "43% conversion ↑",
+    stack: ["Next.js", "Tailwind CSS", "Shopify", "Figma"],
+    duration: "3 weeks",
+    gradient: "from-[#C8A96E]/30 to-[#1A1208]",
+    desc: "Elegant product landing page for a premium watch brand — warm beige aesthetic with live pricing, spec tables, star-rated testimonials, and a high-converting sticky CTA section."
+  },
+  {
+    slug: "trailmate-storefront",
+    title: "TrailMate Adventure Store",
+    category: "Landing Page",
+    industry: "Outdoor & Lifestyle",
+    imageSrc: "/site/tracksuitproject.jpeg",
+    result: "38% add-to-cart ↑",
+    stack: ["React", "Tailwind CSS", "Shopify", "Vercel"],
+    duration: "4 weeks",
+    gradient: "from-[#3A5A40]/30 to-[#0D1F0F]",
+    desc: "Adventure-themed product storefront for an outdoor backpack brand — cinematic hero with mountain imagery, feature grids, detailed spec tables, and a trust-building social proof section."
+  },
+  {
+    slug: "startx-saas-platform",
+    title: "StartX SaaS Platform",
     category: "Web App",
-    tags: ["Next.js", "Python", "PostgreSQL"],
-    badge: { label: "Fintech", variant: "blue" },
-    description: "Real-time trading dashboard with live portfolio analytics, risk scoring, and regulatory reporting for a London-based fintech.",
-    metrics: ["40% ↑ User Engagement", "< 200ms Latency"],
-    gradient: "from-[#2B7EC1]/30 via-[#0D1F3C] to-transparent",
-    imageSrc: "/site/mangement.jpeg",
-  },
-  {
-    title: "LogiFlow Mobile",
-    category: "Mobile",
-    tags: ["Flutter", "Node.js", "Firebase"],
-    badge: { label: "Logistics", variant: "purple" },
-    description: "B2B logistics tracking app for 200+ drivers with offline-first sync, real-time GPS, and automated invoice generation.",
-    metrics: ["50K+ DAU", "4.8★ App Store"],
-    gradient: "from-[#6B3FA0]/30 via-[#0D1F3C] to-transparent",
-    imageSrc: "/site/management1.jpeg",
-  },
-  {
-    title: "HealthBridge AI",
-    category: "AI/ML",
-    tags: ["Python", "FastAPI", "OpenAI", "React"],
-    badge: { label: "HealthTech", variant: "teal" },
-    description: "HIPAA-compliant telemedicine platform with AI symptom checker, video consultations, and automated prescription workflows.",
-    metrics: ["10K+ Consultations", "92% AI Accuracy"],
-    gradient: "from-[#00B4C8]/30 via-[#0D1F3C] to-transparent",
-    imageSrc: "/site/finedge.jpeg",
-  },
-  {
-    title: "EduTrack LMS",
-    category: "Web App",
-    tags: ["Next.js", "Supabase", "Stripe"],
-    badge: { label: "EdTech", variant: "green" },
-    description: "Full-featured LMS platform migrated from legacy PHP to Next.js. 7x performance improvement and 300% growth in users.",
-    metrics: ["300% User Growth", "1.2s Load Time"],
-    gradient: "from-emerald-600/20 via-[#0D1F3C] to-transparent",
-    imageSrc: "/site/learning.jpeg",
-  },
-  {
-    title: "RetailMax Commerce",
-    category: "Enterprise",
-    tags: ["React", "Node.js", "AWS", "Redis"],
-    badge: { label: "E-commerce", variant: "amber" },
-    description: "Enterprise e-commerce platform handling millions in GMV. Survived Black Friday with zero downtime on 10x normal traffic.",
-    metrics: ["$5M+ GMV", "Zero Downtime"],
-    gradient: "from-amber-600/20 via-[#0D1F3C] to-transparent",
-    imageSrc: "/site/ecommerce.jpeg",
-  },
-  {
-    title: "SmartHR Automator",
-    category: "Enterprise",
-    tags: ["Vue 3", "Django", "Celery", "GPT-4"],
-    badge: { label: "HRTech", variant: "purple" },
-    description: "AI-powered HR automation platform that reduces onboarding time by 60% through intelligent document processing and workflows.",
-    metrics: ["60% Faster Onboarding", "500+ Employees"],
-    gradient: "from-[#6B3FA0]/20 via-[#0D1F3C] to-transparent",
-    imageSrc: "/site/hr-ms-system.jpeg",
+    industry: "SaaS / Startup",
+    imageSrc: "/site/tradingproject.jpeg",
+    result: "2,000+ signups/month",
+    stack: ["React", "Node.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
+    duration: "12 weeks",
+    gradient: "from-[#2563EB]/30 to-[#0F172A]",
+    desc: "Full-featured SaaS website for a startup launchpad — tiered pricing cards, feature showcases, brand trust logos, customer testimonials, and a newsletter-powered conversion footer."
   },
 ];
 
@@ -124,23 +100,25 @@ export default function PortfolioGrid() {
             <div className="p-6">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-lg text-white">{project.title}</h3>
-                <Badge variant={project.badge.variant} size="sm">{project.badge.label}</Badge>
               </div>
 
+              {/* ✅ Fixed: was project.description */}
               <p className="text-sm text-[#9CA3AF] leading-relaxed mb-4">
-                {project.description}
+                {project.desc}
               </p>
 
+              {/* ✅ Fixed: was project.metrics (array) — now wraps result string in an array */}
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.metrics.map((m) => (
+                {[project.result].map((m) => (
                   <span key={m} className="text-xs px-2.5 py-1 rounded-md bg-[#2B7EC1]/10 text-[#79b8f0] border border-[#2B7EC1]/20">
                     {m}
                   </span>
                 ))}
               </div>
 
+              {/* ✅ Fixed: was project.tags — now project.stack */}
               <div className="flex flex-wrap gap-1.5">
-                {project.tags.map((tag) => (
+                {project.stack.map((tag) => (
                   <span key={tag} className="text-xs text-[#9CA3AF] bg-white/5 px-2 py-0.5 rounded">
                     {tag}
                   </span>
@@ -153,9 +131,9 @@ export default function PortfolioGrid() {
 
       <div className="text-center mt-12 reveal">
         <Link href="/portfolio">
-        <Button variant="outline" size="lg">
-          View Full Portfolio →
-        </Button>
+          <Button variant="outline" size="lg">
+            View Full Portfolio →
+          </Button>
         </Link>
       </div>
     </SectionWrapper>

@@ -19,56 +19,6 @@ const posts = [
   //   title: "Flutter vs React Native in 2025: A Decision Framework for Startups",          
   //   excerpt: "We've shipped 20+ mobile apps. This is the honest, framework-agnostic guide we wish we'd had — with real benchmarks.",                                                                                          category: "Mobile",          author: { name: "Karan Singh",  avatar: "KS" }, date: "Apr 15, 2025", readTime: "9 min",  emoji: "📱" },
   
-  { slug: "rag-production-lessons",             
-    title: "Building Production RAG Pipelines: Lessons from 5 Deployments",               
-    excerpt: "RAG sounds simple in demos. In production, it's a different story. Embedding choices, chunking strategies, and eval frameworks.",                                                                      
-    category: "AI/ML",           
-    author: { name: "Priya Joshi",  avatar: "PJ" }, 
-    date: "Mar 30, 2025", 
-    readTime: "11 min",
-    imageSrc:"" ,
-  },
-  
-    { slug: "nextjs-performance-checklist",       
-    title: "The 2025 Next.js Performance Checklist (From Real Project Audits)",           
-    excerpt: "12 performance wins we apply to every new project — with before/after Core Web Vitals numbers from real client sites.",                                                                             
-    category: "Development",     
-    author: { name: "Rahul Verma",  avatar: "RV" }, 
-    date: "Mar 12, 2025", 
-    readTime: "8 min",
-    imageSrc:"" ,
-  },
-  
-    { slug: "aws-cost-optimisation",              
-    title: "How We Cut AWS Bills by 40% for 3 Clients in 60 Days",                       
-    excerpt: "The common waste patterns we find in almost every cloud audit, and the exact steps we take to eliminate them.",                                                                                    
-    category: "DevOps",          
-    author: { name: "Karan Singh",  avatar: "KS" }, 
-    date: "Feb 28, 2025", 
-    readTime: "6 min",
-    imageSrc:"" ,
-  },
-  
-    { slug: "figma-design-system-workflow",       
-    title: "The Design System Workflow That Scales Across 10+ Client Projects",          
-    excerpt: "How we structure Figma files, component libraries, and token handoffs so every client gets a consistent, maintainable design system.",                                                             
-    category: "Design",          
-    author: { name: "Anjali Patel", avatar: "AP" }, 
-    date: "Feb 10, 2025", 
-    readTime: "7 min",
-    imageSrc:"" ,
-  },
-  
-    { slug: "mvp-launch-playbook",                
-    title: "The TriAxon MVP Launch Playbook: 0 to Production in 8 Weeks",                
-    excerpt: "The exact process we use to take a founder's idea from a napkin sketch to a live, paying-customer-ready product.",                                                                             
-    category: "Product",         
-    author: { name: "Neha Sharma",  avatar: "NS" }, 
-    date: "Jan 22, 2025", 
-    readTime: "10 min",
-    imageSrc:"" ,
-  },
-  
     { slug: "agentic-ai-acts-not-talks",          
     title: "Agentic AI — The AI That Acts, Not Just Talks",                              
     excerpt: "AI agents are evolving beyond chatbots. From booking travel to fixing code and running research autonomously, Agentic AI is redefining how businesses automate complex workflows in 2026.",      
@@ -76,7 +26,7 @@ const posts = [
     author: { name: "Rahul Verma",  avatar: "RV" }, 
     date: "Jan 12, 2026", 
     readTime: "6 min",
-    imageSrc:"/site/img1.jpeg" ,
+    imageSrc:"/site/agentic_ai.jpeg" ,
   },
   
     { slug: "multi-agent-ai-systems",             
@@ -86,7 +36,7 @@ const posts = [
     author: { name: "Rahul Verma",  avatar: "RV" }, 
     date: "Jan 18, 2026", 
     readTime: "7 min",
-    imageSrc:"" ,
+    imageSrc:"/site/Multiagent_AI.jpeg" ,
   },
   
     { slug: "6g-connectivity-beyond-5g",          
@@ -96,7 +46,7 @@ const posts = [
     author: { name: "Rahul Verma",  avatar: "RV" }, 
     date: "Jan 25, 2026", 
     readTime: "5 min",
-    imageSrc:"" ,
+    imageSrc:"/site/6G_connectivity.jpeg" ,
   },
   
     { slug: "cloud-3-hybrid-multicloud",          
@@ -106,7 +56,7 @@ const posts = [
     author: { name: "Rahul Verma",  avatar: "RV" }, 
     date: "Feb 2, 2026",  
     readTime: "8 min",
-    imageSrc:"" ,
+    imageSrc:"/site/cloud_3.0.jpeg" ,
   },
   
     { slug: "preemptive-cybersecurity-ai",        
@@ -116,7 +66,7 @@ const posts = [
     author: { name: "Rahul Verma",  avatar: "RV" }, 
     date: "Feb 10, 2026", 
     readTime: "6 min",
-    imageSrc:"" ,
+    imageSrc:"/site/Cybersecurity.jpeg" ,
   },
   
     { slug: "physical-ai-robotics",               
@@ -126,7 +76,7 @@ const posts = [
     author: { name: "Rahul Verma",  avatar: "RV" }, 
     date: "Feb 18, 2026", 
     readTime: "7 min",
-    imageSrc:"" ,
+    imageSrc:"/site/Robotics.jpeg" ,
   },
   
     { slug: "space-computing-frontier",           
@@ -136,7 +86,7 @@ const posts = [
     author: { name: "Rahul Verma",  avatar: "RV" }, 
     date: "Feb 25, 2026", 
     readTime: "5 min",
-    imageSrc:"" ,
+    imageSrc:"/site/Space_tech.jpeg" ,
   },
   
     { slug: "confidential-computing-privacy",     
@@ -146,7 +96,7 @@ const posts = [
     author: { name: "Rahul Verma",  avatar: "RV" }, 
     date: "Mar 4, 2026",  
     readTime: "6 min",
-    imageSrc:"" ,
+    imageSrc:"/site/Data_privacy.jpeg" ,
   },
   
     { slug: "green-ai-sustainable-tech",          
@@ -156,7 +106,7 @@ const posts = [
     author: { name: "Rahul Verma",  avatar: "RV" }, 
     date: "Mar 12, 2026", 
     readTime: "7 min",
-    imageSrc:"" ,
+    imageSrc:"/site/Green_ai.jpeg" ,
   },
   
     { slug: "ai-native-software-development",     
@@ -166,7 +116,7 @@ const posts = [
     author: { name: "Rahul Verma",  avatar: "RV" }, 
     date: "Mar 20, 2026", 
     readTime: "8 min",
-    imageSrc:"" ,
+    imageSrc:"/site/Ai_Native.jpeg" ,
   },
 ];
 
@@ -217,7 +167,7 @@ export default function BlogPage() {
             <article className="rounded-2xl border border-white/[0.07] bg-white/[0.02] overflow-hidden hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="h-64 lg:h-auto bg-gradient-to-br from-[#2B7EC1]/20 via-[#0D1F3C] to-[#0A1628] flex items-center justify-center">
-                  <span className="text-[8rem] opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-300">{featured.emoji}</span>
+                  <span className="text-[8rem] opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-300">{featured.imageSrc}</span>
                 </div>
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-4">
@@ -249,37 +199,87 @@ export default function BlogPage() {
       </section>
 
       {/* ALL ARTICLES */}
-      <section className="pb-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display font-bold text-2xl text-white mb-8">All Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-                <article className="h-full rounded-2xl border border-white/[0.07] bg-white/[0.02] overflow-hidden hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300">
-                  <div className="h-36 bg-gradient-to-br from-[#0D1F3C] to-[#0A1628] flex items-center justify-center border-b border-white/[0.05]">
-                    <span className="text-6xl opacity-50 group-hover:opacity-80 group-hover:scale-110 transition-all duration-300">{post.emoji}</span>
+{/* ALL ARTICLES */}
+<section className="pb-28">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="font-display font-bold text-2xl text-white mb-8">
+      All Articles
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {posts.map((post) => (
+        <Link
+          key={post.slug}
+          href={`/blog/${post.slug}`}
+          className="group block"
+        >
+          <article className="h-full rounded-2xl border border-white/[0.07] bg-white/[0.02] overflow-hidden hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300">
+            
+            {/* IMAGE + GRADIENT FIXED */}
+            <div className="h-44 bg-gradient-to-br from-[#0D1F3C] via-[#132B50] to-[#0A1628] relative overflow-hidden">
+              <img
+                src={post.imageSrc}
+                alt={post.title}
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-300"
+              />
+
+              <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#0D1117] to-transparent" />
+
+              <span
+                className={`absolute top-4 right-4 text-xs px-2.5 py-1 rounded-full border ${
+                  categoryColors[post.category] ??
+                  "bg-white/10 text-white border-white/20"
+                }`}
+              >
+                {post.category}
+              </span>
+            </div>
+
+            <div className="p-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span
+                  className={`text-xs px-2.5 py-0.5 rounded-full border ${
+                    categoryColors[post.category]
+                  }`}
+                >
+                  {post.category}
+                </span>
+
+                <span className="text-xs text-[#9CA3AF]">
+                  {post.readTime}
+                </span>
+              </div>
+
+              <h3 className="font-display font-bold text-base text-white mb-3 leading-snug group-hover:text-[#00B4C8] transition-colors line-clamp-2">
+                {post.title}
+              </h3>
+
+              <p className="text-sm text-[#9CA3AF] leading-relaxed mb-5 line-clamp-2">
+                {post.excerpt}
+              </p>
+
+              <div className="flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-[#2B7EC1]/20 text-[#79b8f0] flex items-center justify-center text-xs font-bold">
+                  {post.author.avatar}
+                </div>
+
+                <div>
+                  <div className="text-xs font-medium text-white">
+                    {post.author.name}
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className={`text-xs px-2.5 py-0.5 rounded-full border ${categoryColors[post.category]}`}>{post.category}</span>
-                      <span className="text-xs text-[#9CA3AF]">{post.readTime}</span>
-                    </div>
-                    <h3 className="font-display font-bold text-base text-white mb-3 leading-snug group-hover:text-[#00B4C8] transition-colors line-clamp-2">{post.title}</h3>
-                    <p className="text-sm text-[#9CA3AF] leading-relaxed mb-5 line-clamp-2">{post.excerpt}</p>
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-7 h-7 rounded-lg bg-[#2B7EC1]/20 text-[#79b8f0] flex items-center justify-center text-xs font-bold">{post.author.avatar}</div>
-                      <div>
-                        <div className="text-xs font-medium text-white">{post.author.name}</div>
-                        <div className="text-xs text-[#9CA3AF]">{post.date}</div>
-                      </div>
-                    </div>
+
+                  <div className="text-xs text-[#9CA3AF]">
+                    {post.date}
                   </div>
-                </article>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+                </div>
+              </div>
+            </div>
+          </article>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* NEWSLETTER */}
       <section className="py-20 bg-[#0A1628] border-t border-white/[0.05]">
