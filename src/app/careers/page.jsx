@@ -487,7 +487,7 @@ export default function CareersPage() {
             We're always interested in meeting exceptional engineers and designers. Send us a general application and we'll keep you in mind for future openings.
           </p>
           <a
-            href="mailto:careers@triaxon.tech?subject=General Application"
+            href="mailto:triaxontechnology57@gmail.com?subject=General Application"
             className="inline-flex items-center gap-2 px-10 py-4 rounded-xl bg-gradient-to-r from-[#6B3FA0] to-[#2B7EC1] text-white font-semibold text-base hover:opacity-90 transition-opacity"
           >
             Send Open Application →

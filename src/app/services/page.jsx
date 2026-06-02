@@ -5,8 +5,6 @@ import Navbar from "@/components/layout/header/Navbar";
 import ServiceCard from "@/components/pages/services/ServiceCard";
 import { SERVICES } from "../../../lib/constants";
 
-// REMOVE the entire `const services = [...]` array that was in the file
-
 export const metadata = {
   title: "Our Services | TriAxon Technologies",
   description:
@@ -53,7 +51,13 @@ const stats = [
   { value: "48h", label: "Quote Turnaround" },
 ];
 
-const trustedBy = ["Startups", "Scale-ups", "Enterprises", "Agencies", "Founders"];
+const trustedBy = [
+  "Startups",
+  "Scale-ups",
+  "Enterprises",
+  "Agencies",
+  "Founders",
+];
 
 export default function ServicesPage() {
   return (
@@ -93,7 +97,8 @@ export default function ServicesPage() {
             <span
               className="block text-5xl sm:text-6xl lg:text-[4.5rem]"
               style={{
-                background: "linear-gradient(135deg, #2B7EC1 0%, #6B3FA0 50%, #00B4C8 100%)",
+                background:
+                  "linear-gradient(135deg, #2B7EC1 0%, #6B3FA0 50%, #00B4C8 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -104,16 +109,20 @@ export default function ServicesPage() {
           </h1>
 
           <p className="text-center text-[#9CA3AF] text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-14">
-            From idea to production — strategy, design, engineering, cloud, AI, and growth.
-            We're the team you hire when shipping actually matters.
+            From idea to production — strategy, design, engineering, cloud, AI,
+            and growth. We're the team you hire when shipping actually matters.
           </p>
 
           {/* stat row */}
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
-                <div className="text-3xl font-extrabold text-white mb-0.5">{s.value}</div>
-                <div className="text-xs text-[#6B7280] uppercase tracking-widest">{s.label}</div>
+                <div className="text-3xl font-extrabold text-white mb-0.5">
+                  {s.value}
+                </div>
+                <div className="text-xs text-[#6B7280] uppercase tracking-widest">
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
@@ -123,11 +132,15 @@ export default function ServicesPage() {
       {/* ── TRUSTED BY strip ── */}
       <div className="border-y border-white/[0.05] py-5 bg-white/[0.01]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-2 text-sm text-[#4B5563]">
-          <span className="mr-3 text-xs uppercase tracking-widest text-[#374151]">Trusted by</span>
+          <span className="mr-3 text-xs uppercase tracking-widest text-[#374151]">
+            Trusted by
+          </span>
           {trustedBy.map((t, i) => (
             <span key={t} className="flex items-center gap-2">
               <span className="text-[#9CA3AF]">{t}</span>
-              {i < trustedBy.length - 1 && <span className="text-[#1F2937]">·</span>}
+              {i < trustedBy.length - 1 && (
+                <span className="text-[#1F2937]">·</span>
+              )}
             </span>
           ))}
           <span className="ml-3 text-xs text-[#374151]">worldwide</span>
@@ -135,11 +148,11 @@ export default function ServicesPage() {
       </div>
 
       {/* ── SERVICES GRID ── */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-  {SERVICES.map((s) => (
-    <ServiceCard key={s.href} s={s} />
-  ))}
-</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {SERVICES.map((s) => (
+          <ServiceCard key={s.href} s={s} />
+        ))}
+      </div>
 
       {/* ── WHY TRIAXON ── */}
       <section className="py-24 border-y border-white/[0.05]">
@@ -165,8 +178,9 @@ export default function ServicesPage() {
                 </span>
               </h2>
               <p className="text-[#9CA3AF] text-lg leading-relaxed mb-8">
-                Most agencies hand you a finished product and disappear. We stay in the
-                room — measuring, iterating, and optimising until your business goals are hit.
+                Most agencies hand you a finished product and disappear. We stay
+                in the room — measuring, iterating, and optimising until your
+                business goals are hit.
               </p>
               <Link
                 href="/contact"
@@ -182,12 +196,30 @@ export default function ServicesPage() {
             {/* right feature list */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { title: "Fixed-Price Quotes", desc: "No scope creep, no surprise invoices. Agreed price, period." },
-                { title: "Weekly Demos", desc: "See real progress every week. You always know where things stand." },
-                { title: "Senior-Only Teams", desc: "No juniors on client work. Every project is led by a senior engineer." },
-                { title: "Full Ownership", desc: "100% of the source code, IP, and assets are yours on day one." },
-                { title: "Post-Launch Support", desc: "60 days of free bug fixes after every launch. We stand by our work." },
-                { title: "One Timezone, Always", desc: "Your dedicated PM responds within 4 hours, guaranteed." },
+                {
+                  title: "Fixed-Price Quotes",
+                  desc: "No scope creep, no surprise invoices. Agreed price, period.",
+                },
+                {
+                  title: "Weekly Demos",
+                  desc: "See real progress every week. You always know where things stand.",
+                },
+                {
+                  title: "Senior-Only Teams",
+                  desc: "No juniors on client work. Every project is led by a senior engineer.",
+                },
+                {
+                  title: "Full Ownership",
+                  desc: "100% of the source code, IP, and assets are yours on day one.",
+                },
+                {
+                  title: "Post-Launch Support",
+                  desc: "60 days of free bug fixes after every launch. We stand by our work.",
+                },
+                {
+                  title: "One Timezone, Always",
+                  desc: "Your dedicated PM responds within 4 hours, guaranteed.",
+                },
               ].map((f) => (
                 <div
                   key={f.title}
@@ -195,13 +227,25 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-5 h-5 rounded-full bg-[#2B7EC1]/20 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-[#2B7EC1]" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <svg
+                        className="w-3 h-3 text-[#2B7EC1]"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                     </div>
-                    <h4 className="text-sm font-semibold text-white">{f.title}</h4>
+                    <h4 className="text-sm font-semibold text-white">
+                      {f.title}
+                    </h4>
                   </div>
-                  <p className="text-xs text-[#6B7280] leading-relaxed">{f.desc}</p>
+                  <p className="text-xs text-[#6B7280] leading-relaxed">
+                    {f.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -220,7 +264,8 @@ export default function ServicesPage() {
               From Inquiry to Launch
             </h2>
             <p className="text-[#6B7280] max-w-lg mx-auto">
-              A proven 5-step process refined across 150+ projects. Predictable, transparent, fast.
+              A proven 5-step process refined across 150+ projects. Predictable,
+              transparent, fast.
             </p>
           </div>
 
@@ -230,16 +275,23 @@ export default function ServicesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               {process.map((p, i) => (
-                <div key={p.step} className="group relative flex flex-col items-center text-center">
+                <div
+                  key={p.step}
+                  className="group relative flex flex-col items-center text-center"
+                >
                   {/* step circle */}
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center text-xl mb-4 border border-white/[0.08] bg-white/[0.03] group-hover:border-[#2B7EC1]/40 group-hover:bg-[#2B7EC1]/08 transition-all duration-300 relative z-10"
-                  >
+                  <div className="w-14 h-14 rounded-full flex items-center justify-center text-xl mb-4 border border-white/[0.08] bg-white/[0.03] group-hover:border-[#2B7EC1]/40 group-hover:bg-[#2B7EC1]/08 transition-all duration-300 relative z-10">
                     {p.icon}
                   </div>
-                  <div className="text-[10px] font-mono text-[#2B7EC1] mb-1">{p.step}</div>
-                  <h3 className="font-semibold text-white text-sm mb-2">{p.label}</h3>
-                  <p className="text-xs text-[#6B7280] leading-relaxed">{p.desc}</p>
+                  <div className="text-[10px] font-mono text-[#2B7EC1] mb-1">
+                    {p.step}
+                  </div>
+                  <h3 className="font-semibold text-white text-sm mb-2">
+                    {p.label}
+                  </h3>
+                  <p className="text-xs text-[#6B7280] leading-relaxed">
+                    {p.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -253,19 +305,22 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
-                quote: "TriAxon delivered our entire SaaS platform in 10 weeks. Quality was outstanding and they were transparent throughout.",
+                quote:
+                  "TriAxon delivered our entire SaaS platform in 10 weeks. Quality was outstanding and they were transparent throughout.",
                 name: "Arjun Mehta",
                 role: "CEO, LaunchPad SaaS",
                 accent: "#2B7EC1",
               },
               {
-                quote: "The mobile app they built for us has a 4.9★ rating on the App Store. They understood our users better than we did.",
+                quote:
+                  "The mobile app they built for us has a 4.9★ rating on the App Store. They understood our users better than we did.",
                 name: "Sarah Kim",
                 role: "Founder, FitTrack",
                 accent: "#6B3FA0",
               },
               {
-                quote: "Our AI recommendation engine increased revenue by 28% in the first month. These folks really know their ML.",
+                quote:
+                  "Our AI recommendation engine increased revenue by 28% in the first month. These folks really know their ML.",
                 name: "David Chen",
                 role: "CTO, RetailAI",
                 accent: "#00B4C8",
@@ -278,7 +333,13 @@ export default function ServicesPage() {
                 {/* stars */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4" style={{ color: t.accent }} fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      key={i}
+                      className="w-4 h-4"
+                      style={{ color: t.accent }}
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
@@ -295,10 +356,15 @@ export default function ServicesPage() {
                       border: `1px solid ${t.accent}44`,
                     }}
                   >
-                    {t.name.split(" ").map((n) => n[0]).join("")}
+                    {t.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-white">{t.name}</div>
+                    <div className="text-sm font-semibold text-white">
+                      {t.name}
+                    </div>
                     <div className="text-xs text-[#6B7280]">{t.role}</div>
                   </div>
                 </div>
@@ -320,11 +386,11 @@ export default function ServicesPage() {
           </div>
 
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white leading-tight mb-5">
-            Not sure which service{" "}
-            <br className="hidden sm:block" />
+            Not sure which service <br className="hidden sm:block" />
             <span
               style={{
-                background: "linear-gradient(90deg, #2B7EC1, #6B3FA0 50%, #00B4C8)",
+                background:
+                  "linear-gradient(90deg, #2B7EC1, #6B3FA0 50%, #00B4C8)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -335,15 +401,18 @@ export default function ServicesPage() {
           </h2>
 
           <p className="text-[#9CA3AF] text-lg mb-10 max-w-xl mx-auto">
-            Book a free 30-minute consultation. We'll map out exactly what your product
-            needs — and give you an honest assessment, even if that means referring you elsewhere.
+            Book a free 30-minute consultation. We'll map out exactly what your
+            product needs — and give you an honest assessment, even if that
+            means referring you elsewhere.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-white font-semibold text-base transition-opacity hover:opacity-90"
-              style={{ background: "linear-gradient(135deg, #2B7EC1, #6B3FA0)" }}
+              style={{
+                background: "linear-gradient(135deg, #2B7EC1, #6B3FA0)",
+              }}
             >
               Book Free Consultation →
             </Link>

@@ -574,7 +574,7 @@ export default function PackagesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
           {/* TRUST STATS */}
-          <div className="grid md:grid-cols-4 gap-6 mb-16">
+          {/* <div className="grid md:grid-cols-4 gap-6 mb-16">
             {[
               {
                 number: "50+",
@@ -606,7 +606,7 @@ export default function PackagesPage() {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* BIG CTA */}
           <div className="rounded-[32px] overflow-hidden border border-[#2B7EC1]/20 bg-gradient-to-br from-[#101827] via-[#0F1725] to-[#0D1117] p-10 md:p-14 relative">

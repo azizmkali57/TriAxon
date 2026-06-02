@@ -14,8 +14,8 @@ const blogs = [
     title: "Agentic AI — The AI That Acts, Not Just Talks",
     excerpt:
       "AI agents are evolving beyond chatbots. From booking travel to fixing code and running research autonomously, Agentic AI is redefining how businesses automate complex workflows in 2026.",
-    author: "Rahul Verma",
-    authorRole: "CTO",
+    author: "Amaan Husain",
+    authorRole: "Project Manager",
     date: "Jan 12, 2026",
     readTime: "6 min read",
     imageSrc: "/site/agentic_ai.jpeg",
@@ -26,8 +26,8 @@ const blogs = [
     title: "Multi-Agent AI Systems",
     excerpt:
       "Multi-agent AI systems allow specialized AI agents to collaborate on tasks, bringing better scalability, coordination, and automation to enterprise workflows and intelligent platforms.",
-    author: "Rahul Verma",
-    authorRole: "CTO",
+    author: "Amaan Husain",
+    authorRole: "Project Manager",
     date: "Jan 18, 2026",
     readTime: "7 min read",
     imageSrc: "/site/Multiagent_AI.jpeg",
@@ -38,8 +38,8 @@ const blogs = [
     title: "6G Connectivity — Beyond 5G",
     excerpt:
       "6G is set to revolutionize wireless communication with ultra-low latency, AI-driven networking, and hyper-connected digital ecosystems far beyond what 5G can offer.",
-    author: "Rahul Verma",
-    authorRole: "CTO",
+    author: "Amaan Husain",
+    authorRole: "Project Manager",
     date: "Jan 25, 2026",
     readTime: "5 min read",
     imageSrc: "/site/6G_connectivity.jpeg",

@@ -9,8 +9,8 @@ const contactInfo = [
   {
     icon: "📧",
     label: "Email Us",
-    value: "triaxontechnologies57@gmail.com",
-    href: "mailto:triaxontechnologies57@gmail.com",
+    value: "triaxontechnology57@gmail.com",
+    href: "mailto:triaxontechnology57@gmail.com",
   },
   {
     icon: "📞",

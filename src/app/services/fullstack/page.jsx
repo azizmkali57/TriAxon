@@ -43,20 +43,19 @@ const faqs = [
 
 const caseStudies = [
   {
-    title:    "FinEdge Dashboard",
-    industry: "Fintech",
-    result:   "40% engagement ↑",
-    stack:    ["Next.js", "Python", "PostgreSQL"],
-    desc:     "Real-time financial analytics dashboard serving 10,000+ daily active users with sub-200ms API response times.",
-    // image: "/portfolio/finedge.jpg"  ← add your image here
+    title: "TimeCraft Watch Store",
+    result: "43% conversion ↑",
+    industry: "E-Commerce",
+    imageSrc: "/site/watchproject.jpeg",  
+    stack: ["Next.js", "Tailwind CSS", "Shopify", "Figma"],     
+    desc: "Elegant product landing page for a premium watch brand — warm beige aesthetic with live pricing, spec tables, star-rated testimonials, and a high-converting sticky CTA section."
   },
-  {
-    title:    "EduTrack LMS",
-    industry: "EdTech",
-    result:   "7× faster page loads",
-    stack:    ["Next.js", "Supabase", "Stripe"],
-    desc:     "Migrated legacy PHP monolith to Next.js. Page loads dropped from 8s to 1.1s. Stripe billing integrated in week 3.",
-    // image: "/portfolio/edutrack.jpg"  ← add your image here
+  {     
+    title: "SoundCore Earbuds Page",
+    imageSrc: "/site/earbudsproject.jpeg",
+    result: "51% CTR on Buy Now",
+    stack: ["Next.js", "GSAP", "Tailwind CSS", "Shopify"],
+    desc: "Dark-luxury product page for a premium wireless earbuds brand — immersive black-and-gold hero, animated spec reveals, ENC feature highlights, and a bold gold sticky buy CTA."
   },
 ];
 
@@ -120,9 +119,10 @@ export default function FullStackPage() {
               <div className="relative rounded-2xl border border-[#2B7EC1]/20 bg-[#0A1628] overflow-hidden aspect-[4/3] flex items-center justify-center">
                 {/* ── Replace this block with your <Image> component ── */}
                 <div className="text-center">
-                  <div className="text-6xl mb-4">🖥️</div>
+                  <img src="/site/fullstack-hero.png" alt="Hero Image" className="w-full h-full object-cover" />
+                  {/* <div className="text-6xl mb-4">🖥️</div>
                   <p className="text-[#4B5563] text-sm">Hero image goes here</p>
-                  <p className="text-[#374151] text-xs mt-1">Recommended: 800×600px</p>
+                  <p className="text-[#374151] text-xs mt-1">Recommended: 800×600px</p> */}
                 </div>
                 {/* ─────────────────────────────────────────────────── */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D1117]/60 to-transparent pointer-events-none" />
@@ -189,9 +189,10 @@ export default function FullStackPage() {
             <div className="rounded-2xl border border-white/[0.07] bg-[#0A1628] overflow-hidden aspect-[4/3] flex items-center justify-center order-2 lg:order-1">
               {/* ── Replace with your <Image> component ── */}
               <div className="text-center">
-                <div className="text-5xl mb-3">⚙️</div>
+                <img src="/site/fullstack-section.png" alt="Hero Image" className="w-full h-full object-cover" />
+                {/* <div className="text-5xl mb-3">⚙️</div>
                 <p className="text-[#4B5563] text-sm">Section image goes here</p>
-                <p className="text-[#374151] text-xs mt-1">Recommended: 700×525px</p>
+                <p className="text-[#374151] text-xs mt-1">Recommended: 700×525px</p> */}
               </div>
               {/* ─────────────────────────────────────── */}
             </div>
@@ -271,9 +272,10 @@ export default function FullStackPage() {
             <div className="rounded-2xl border border-white/[0.07] bg-[#0D1117] overflow-hidden aspect-[4/3] flex items-center justify-center">
               {/* ── Replace with your <Image> component ── */}
               <div className="text-center">
-                <div className="text-5xl mb-3">📦</div>
+                <img src="/site/fullstack-section2.png" alt="Deliverables Image" className="w-full h-full object-cover" />
+                {/* <div className="text-5xl mb-3">📦</div>
                 <p className="text-[#4B5563] text-sm">Deliverables image goes here</p>
-                <p className="text-[#374151] text-xs mt-1">Recommended: 700×525px</p>
+                <p className="text-[#374151] text-xs mt-1">Recommended: 700×525px</p> */}
               </div>
               {/* ─────────────────────────────────────── */}
             </div>
@@ -295,8 +297,7 @@ export default function FullStackPage() {
                 <div className="aspect-[16/9] bg-[#0A1628] flex items-center justify-center border-b border-white/[0.05]">
                   {/* ── Replace with <Image src={cs.image} ... /> ── */}
                   <div className="text-center">
-                    <div className="text-4xl mb-2">📸</div>
-                    <p className="text-[#374151] text-xs">Case study screenshot</p>
+                    <img src={cs.imageSrc} alt={cs.title} className="w-full h-full object-cover" />
                   </div>
                   {/* ──────────────────────────────────────────── */}
                 </div>

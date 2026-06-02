@@ -24,7 +24,7 @@ export default function Footer() {
             </p>
 
             <div className="space-y-2 text-sm text-[#9CA3AF]">
-              <p>triaxontechnologies57@gmail.com</p>
+              <p>triaxontechnology57@gmail.com</p>
               <p>+91 90392 90553</p>
               <p>Khatiwala Tank Indore, India 452014</p>
             </div>

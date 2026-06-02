@@ -52,7 +52,7 @@ const services = [
 
 const mainLinks = [
   { label: "Services", href: "/services" },
-  { label: "PACKAGES", href: "/packages" },
+  { label: "Packages", href: "/packages" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
@@ -214,10 +214,10 @@ export default function MobileMenu({ open, onClose }) {
             </p>
 
             <a
-              href="mailto:triaxontechnologies@gmail.com"
+              href="mailto:triaxontechnology57@gmail.com"
               className="text-sm text-white hover:text-[#00B4C8] transition-colors block mb-1"
             >
-              triaxontechnologies@gmail.com
+              triaxontechnology57@gmail.com
             </a>
 
             <a

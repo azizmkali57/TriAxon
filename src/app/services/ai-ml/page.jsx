@@ -1,146 +1,373 @@
 import Link from "next/link";
+import Image from "next/image";
+import {
+  FiArrowRight,
+  FiCpu,
+  FiDatabase,
+  FiLayers,
+  FiBarChart2,
+  FiEye,
+  FiMessageSquare,
+  FiZap,
+  FiTrendingUp,
+} from "react-icons/fi";
+import Navbar from "@/components/layout/header/Navbar";
+import Footer from "@/components/layout/footer/Footer";
 
 export const metadata = {
   title: "AI & Machine Learning Services | TriAxon Technologies",
-  description: "LLM integrations, RAG pipelines, recommendation engines, and ML model deployment. Real AI in production, not demos.",
+  description:
+    "Production-grade AI systems: LLMs, RAG pipelines, ML models, agents, and automation for real business impact.",
 };
 
+const stats = [
+  { value: "20+", label: "AI Systems Built", icon: FiCpu },
+  { value: "92%", label: "Model Accuracy", icon: FiTrendingUp },
+  { value: "60%", label: "Automation Increase", icon: FiZap },
+  { value: "8+", label: "AI Use Cases per Client", icon: FiLayers },
+];
+
 const offerings = [
-  { icon: "🧠", title: "LLM Integration & Fine-tuning", desc: "GPT-4, Claude, Gemini, and open-source model integrations with prompt engineering, guardrails, and evaluation pipelines." },
-  { icon: "📚", title: "RAG Pipelines",                 desc: "Retrieval-Augmented Generation systems that let your AI answer questions using your private documents and databases accurately." },
-  { icon: "🔮", title: "Recommendation Engines",        desc: "Collaborative filtering, content-based, and hybrid recommendation systems for e-commerce, content, and matching platforms." },
-  { icon: "👁️", title: "Computer Vision",               desc: "Object detection, image classification, OCR, and document intelligence for healthcare, logistics, and manufacturing." },
-  { icon: "💬", title: "NLP & Text Analytics",          desc: "Sentiment analysis, entity extraction, document classification, and custom chatbots trained on your data." },
-  { icon: "📊", title: "Predictive Analytics",          desc: "Churn prediction, demand forecasting, fraud detection, and business intelligence powered by ML models." },
-  { icon: "🤖", title: "AI Agents & Automation",        desc: "Multi-agent workflows with tool use, function calling, and autonomous task execution using LangChain and CrewAI." },
-  { icon: "🏭", title: "MLOps & Model Deployment",      desc: "Model versioning, A/B testing, monitoring, retraining pipelines, and production deployment on AWS SageMaker or custom infra." },
-];
-
-const stack = [
-  { category: "LLMs",        items: ["OpenAI GPT-4o", "Anthropic Claude", "Google Gemini", "Llama 3", "Mistral"] },
-  { category: "Frameworks",  items: ["LangChain", "LlamaIndex", "CrewAI", "Hugging Face", "FastAPI"] },
-  { category: "Vector DBs",  items: ["Pinecone", "Weaviate", "pgvector", "Qdrant", "Chroma"] },
-  { category: "ML / Data",   items: ["PyTorch", "scikit-learn", "Pandas", "Spark", "dbt", "Airflow"] },
-];
-
-const useCases = [
-  { industry: "Fintech",    use: "Fraud detection & risk scoring", emoji: "💳" },
-  { industry: "HealthTech", use: "AI symptom checker & triage",    emoji: "🏥" },
-  { industry: "Legal",      use: "Contract review & summarisation", emoji: "⚖️" },
-  { industry: "HR Tech",    use: "Resume screening & matching",    emoji: "👥" },
-  { industry: "E-Commerce", use: "Personalised recommendations",   emoji: "🛒" },
-  { industry: "EdTech",     use: "Adaptive learning paths & tutors", emoji: "📚" },
+  {
+    icon: FiMessageSquare,
+    title: "LLM Integration",
+    desc: "GPT, Claude, Gemini & open-source LLMs with prompt engineering and guardrails.",
+  },
+  {
+    icon: FiDatabase,
+    title: "RAG Systems",
+    desc: "Enterprise retrieval systems powered by vector databases and embeddings.",
+  },
+  {
+    icon: FiBarChart2,
+    title: "Predictive Models",
+    desc: "Forecasting, churn prediction, fraud detection and analytics pipelines.",
+  },
+  {
+    icon: FiEye,
+    title: "Computer Vision",
+    desc: "OCR, detection, classification and real-time image intelligence systems.",
+  },
+  {
+    icon: FiLayers,
+    title: "AI Agents",
+    desc: "Autonomous workflows using tool calling, LangChain and multi-agent systems.",
+  },
+  {
+    icon: FiZap,
+    title: "MLOps Deployment",
+    desc: "Production deployment, monitoring, scaling and model lifecycle management.",
+  },
 ];
 
 export default function AiMlPage() {
   return (
-    <main className="bg-[#0D1117] min-h-screen">
-      <section className="relative pt-36 pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_-5%,rgba(107,63,160,0.22),transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_80%_70%,rgba(0,180,200,0.12),transparent)]" />
-        <div className="dot-pattern absolute inset-0 opacity-30" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Link href="/services" className="inline-flex items-center gap-2 text-sm text-[#9CA3AF] hover:text-white mb-8 transition-colors">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
-            All Services
+    <main className="bg-[#050B14] text-white">
+      {/* <Navbar /> */}
+
+      {/* HERO */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+
+        <div className="absolute inset-0">
+          <div className="absolute w-[600px] h-[600px] bg-purple-500/10 blur-[160px] rounded-full top-[-200px] left-[-200px]" />
+          <div className="absolute w-[600px] h-[600px] bg-cyan-500/10 blur-[160px] rounded-full bottom-[-200px] right-[-200px]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
+
+          <Link
+            href="/services"
+            className="text-sm text-slate-400 hover:text-white transition mb-10 inline-block"
+          >
+            ← Back to Services
           </Link>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* LEFT */}
             <div>
-              <div className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full border border-[#6B3FA0]/30 bg-[#6B3FA0]/10">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#b392d8] animate-pulse" />
-                <span className="text-sm text-[#b392d8] font-mono">Trending · High Demand</span>
+
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/20 bg-purple-500/10 text-purple-300 text-sm mb-8">
+                Production AI Systems
               </div>
-              <span className="text-4xl mb-5 block">🤖</span>
-              <h1 className="font-display font-extrabold text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
-                AI & Machine<br />
-                <span className="bg-gradient-to-r from-[#6B3FA0] to-[#00B4C8] bg-clip-text text-transparent">Learning</span>
+
+              <h1 className="text-5xl md:text-6xl xl:text-7xl font-black leading-[1.05]">
+                AI & Machine
+                <br />
+                <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                  Learning Systems
+                </span>
               </h1>
-              <p className="text-[#9CA3AF] text-lg leading-relaxed mb-8">
-                We don't build AI demos — we deploy AI to production. LLM pipelines, ML models, and intelligent automation that delivers measurable ROI.
+
+              <p className="text-slate-400 text-lg mt-8 max-w-xl">
+                We build real production AI — not demos. From LLM pipelines to
+                RAG systems and autonomous agents, everything is engineered for
+                ROI and scalability.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#6B3FA0] to-[#00B4C8] text-white font-semibold hover:opacity-90 transition-opacity">Start AI Project →</Link>
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-[#6B3FA0]/40 text-[#b392d8] font-semibold hover:bg-[#6B3FA0]/10 transition-colors">Free AI Consultation</Link>
+
+              <div className="flex gap-4 mt-10 flex-wrap">
+
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold flex items-center gap-2 hover:scale-105 transition"
+                >
+                  Start AI Project <FiArrowRight />
+                </Link>
+
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
+                >
+                  Free Consultation
+                </Link>
+
+              </div>
+
+              {/* STATS */}
+              <div className="grid grid-cols-2 gap-5 mt-14">
+
+                {stats.map((s) => {
+                  const Icon = s.icon;
+
+                  return (
+                    <div
+                      key={s.label}
+                      className="p-6 rounded-2xl border border-white/10 bg-white/[0.03]"
+                    >
+                      <Icon className="text-purple-400 mb-4" size={22} />
+                      <div className="text-3xl font-bold">{s.value}</div>
+                      <div className="text-sm text-slate-400">{s.label}</div>
+                    </div>
+                  );
+                })}
+
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              {[{v:"20+",l:"AI Products Built"},{v:"92%",l:"Avg. Model Accuracy"},{v:"60%",l:"Avg. Manual Work Reduced"},{v:"8",l:"AI Use Cases Per Client"}].map(({v,l})=>(
-                <div key={l} className="p-5 rounded-2xl border border-white/[0.07] bg-white/[0.03] text-center">
-                  <div className="font-display font-extrabold text-3xl text-white mb-1">{v}</div>
-                  <div className="text-xs text-[#9CA3AF]">{l}</div>
-                </div>
-              ))}
+
+            {/* RIGHT */}
+            <div className="relative">
+
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 blur-3xl rounded-full" />
+
+              <div className="relative border border-white/10 rounded-[30px] overflow-hidden bg-[#0B1320]">
+
+                <Image
+                  src="/images/ai/hero-ai.webp"
+                  alt="AI Systems"
+                  width={1200}
+                  height={900}
+                  className="w-full"
+                  priority
+                />
+
+              </div>
+
+              <div className="absolute -top-5 -left-5 bg-[#0B1320] border border-white/10 rounded-xl p-4">
+                <p className="text-xs text-slate-400">Automation Gain</p>
+                <p className="text-xl font-bold text-cyan-400">+60%</p>
+              </div>
+
+              <div className="absolute -bottom-5 right-0 bg-[#0B1320] border border-white/10 rounded-xl p-4">
+                <p className="text-xs text-slate-400">Model Accuracy</p>
+                <p className="text-xl font-bold text-purple-400">92%</p>
+              </div>
+
             </div>
+
           </div>
         </div>
       </section>
+            {/* PART 2 START */}
 
-      <section className="py-24 bg-[#0A1628]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-xs font-mono text-[#00B4C8] uppercase tracking-widest mb-3">Capabilities</p>
-            <h2 className="font-display font-bold text-4xl text-white">What We Build</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {offerings.map((o) => (
-              <div key={o.title} className="group p-5 rounded-2xl border border-white/[0.07] bg-white/[0.02] hover:border-[#6B3FA0]/30 hover:-translate-y-1 transition-all duration-300">
-                <div className="text-2xl mb-3">{o.icon}</div>
-                <h3 className="font-semibold text-white text-sm mb-2 group-hover:text-[#b392d8] transition-colors">{o.title}</h3>
-                <p className="text-xs text-[#9CA3AF] leading-relaxed">{o.desc}</p>
-              </div>
-            ))}
-          </div>
+      {/* OFFERINGS */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold">
+            End-to-End AI Capabilities
+          </h2>
+          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+            From raw data to deployed intelligence systems — we handle the full AI lifecycle.
+          </p>
         </div>
-      </section>
 
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-xs font-mono text-[#00B4C8] uppercase tracking-widest mb-3">Tech Stack</p>
-            <h2 className="font-display font-bold text-4xl text-white">Our AI Toolset</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {stack.map((s) => (
-              <div key={s.category} className="p-6 rounded-2xl border border-white/[0.07] bg-white/[0.02]">
-                <p className="text-xs font-mono text-[#6B3FA0] uppercase tracking-widest mb-4">{s.category}</p>
-                <div className="flex flex-wrap gap-2">
-                  {s.items.map((item) => (
-                    <span key={item} className="text-xs px-2.5 py-1.5 rounded-lg bg-[#6B3FA0]/8 border border-[#6B3FA0]/15 text-[#9CA3AF]">{item}</span>
-                  ))}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {offerings.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div
+                key={item.title}
+                className="p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition group"
+              >
+                <Icon className="text-cyan-400 mb-5 group-hover:scale-110 transition" size={26} />
+
+                <h3 className="text-xl font-semibold mb-3">
+                  {item.title}
+                </h3>
+
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+
+                <div className="mt-6 text-sm text-purple-400 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                  Learn more <FiArrowRight />
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
+
         </div>
       </section>
 
-      <section className="py-24 bg-[#0A1628]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* PROCESS */}
+      <section className="border-t border-white/10 py-24">
+
+        <div className="max-w-7xl mx-auto px-6">
+
           <div className="text-center mb-16">
-            <p className="text-xs font-mono text-[#00B4C8] uppercase tracking-widest mb-3">Use Cases</p>
-            <h2 className="font-display font-bold text-4xl text-white">AI Across Industries</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Our AI Development Process
+            </h2>
+            <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+              A structured pipeline to turn ideas into scalable AI systems.
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {useCases.map((u) => (
-              <div key={u.industry} className="flex items-center gap-4 p-5 rounded-2xl border border-white/[0.07] bg-white/[0.02] hover:border-[#6B3FA0]/30 transition-colors">
-                <span className="text-3xl">{u.emoji}</span>
-                <div>
-                  <div className="text-xs font-mono text-[#9CA3AF] mb-0.5">{u.industry}</div>
-                  <div className="text-sm font-semibold text-white">{u.use}</div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+
+            {[
+              {
+                step: "01",
+                title: "Discovery",
+                desc: "We analyze your business problem and define AI opportunities.",
+              },
+              {
+                step: "02",
+                title: "Data Engineering",
+                desc: "Clean, structure and prepare datasets for model readiness.",
+              },
+              {
+                step: "03",
+                title: "Model Building",
+                desc: "Train, fine-tune and optimize ML / LLM systems.",
+              },
+              {
+                step: "04",
+                title: "Deployment",
+                desc: "Deploy with monitoring, scaling and continuous improvement.",
+              },
+            ].map((p) => (
+              <div
+                key={p.step}
+                className="p-6 rounded-2xl border border-white/10 bg-white/[0.03]"
+              >
+                <div className="text-purple-400 font-bold mb-3">
+                  {p.step}
                 </div>
+                <h3 className="text-lg font-semibold mb-2">
+                  {p.title}
+                </h3>
+                <p className="text-sm text-slate-400">
+                  {p.desc}
+                </p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
-      <section className="py-24">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="font-display font-bold text-4xl text-white mb-4">Let's Add Intelligence to Your Product</h2>
-          <p className="text-[#9CA3AF] text-lg mb-8">Free AI feasibility consultation — we'll show you what's possible, what's practical, and what delivers the fastest ROI.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-4 rounded-xl bg-gradient-to-r from-[#6B3FA0] to-[#00B4C8] text-white font-semibold text-base hover:opacity-90 transition-opacity">Book AI Consultation →</Link>
+      {/* USE CASES */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Real-World AI Use Cases
+          </h2>
+          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+            We don’t build concepts — we build production systems that generate ROI.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-10">
+
+          <div className="p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-purple-500/10 to-transparent">
+            <h3 className="text-2xl font-semibold mb-4">
+              Enterprise Automation
+            </h3>
+            <p className="text-slate-400">
+              Replace manual workflows with AI agents that handle support,
+              reporting, and operations automatically.
+            </p>
+          </div>
+
+          <div className="p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/10 to-transparent">
+            <h3 className="text-2xl font-semibold mb-4">
+              Intelligent Search (RAG)
+            </h3>
+            <p className="text-slate-400">
+              Build internal GPT-like systems that understand company data and
+              answer queries instantly.
+            </p>
+          </div>
+
+          <div className="p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-blue-500/10 to-transparent">
+            <h3 className="text-2xl font-semibold mb-4">
+              Predictive Intelligence
+            </h3>
+            <p className="text-slate-400">
+              Forecast sales, detect fraud, and predict user behavior using ML models.
+            </p>
+          </div>
+
+          <div className="p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-500/10 to-transparent">
+            <h3 className="text-2xl font-semibold mb-4">
+              AI Customer Experience
+            </h3>
+            <p className="text-slate-400">
+              Smart chatbots and assistants that improve customer engagement and conversions.
+            </p>
+          </div>
+
         </div>
       </section>
+
+      {/* FINAL CTA */}
+      <section className="border-t border-white/10 py-24">
+
+        <div className="max-w-4xl mx-auto text-center px-6">
+
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Ready to Build Real AI Systems?
+          </h2>
+
+          <p className="text-slate-400 mt-6">
+            Let’s turn your idea into a production-grade AI system that actually delivers results.
+          </p>
+
+          <div className="flex justify-center gap-4 mt-10 flex-wrap">
+
+            <Link
+              href="/contact"
+              className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold flex items-center gap-2 hover:scale-105 transition"
+            >
+              Start Your Project <FiArrowRight />
+            </Link>
+
+            <Link
+              href="/services"
+              className="px-8 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
+            >
+              Explore More Services
+            </Link>
+
+          </div>
+
+        </div>
+      </section>
+      <Footer />
     </main>
   );
 }

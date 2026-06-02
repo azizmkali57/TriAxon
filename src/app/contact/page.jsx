@@ -14,9 +14,9 @@ const contactMethods = [
   {
     icon: "📧",
     label: "Email",
-    value: "triaxontechnologies@gmail.com",
+    value: "triaxontechnology57@gmail.com",
     sub: "For general inquiries",
-    href: "mailto:triaxontechnologies@gmail.com",
+    href: "mailto:triaxontechnology57@gmail.com",
     color: "border-[#2B7EC1]/30 bg-[#2B7EC1]/5 hover:border-[#2B7EC1]/60",
     iconBg: "bg-[#2B7EC1]/15 text-[#79b8f0]",
   },
@@ -103,29 +103,29 @@ const faqs = [
   },
 ];
 
-const offices = [
-  {
-    city: "Indore (HQ)",
-    address: "4th Floor, Treasure Island Mall, MG Road, Indore – 452001",
-    phone: "+91 98765 43210",
-    email: "hello@triaxon.tech",
-    flag: "🇮🇳",
-  },
-  {
-    city: "Dubai (Sales)",
-    address: "DIFC, Gate Avenue, Dubai, UAE",
-    phone: "+971 50 000 0000",
-    email: "dubai@triaxon.tech",
-    flag: "🇦🇪",
-  },
-  {
-    city: "London (Sales)",
-    address: "WeWork, 1 Poultry, London EC2R 8EJ",
-    phone: "+44 20 0000 0000",
-    email: "london@triaxon.tech",
-    flag: "🇬🇧",
-  },
-];
+// const offices = [
+//   {
+//     city: "Indore (HQ)",
+//     address: "4th Floor, Treasure Island Mall, MG Road, Indore – 452001",
+//     phone: "+91 98765 43210",
+//     email: "triaxontechnology57@gmail.com",
+//     flag: "🇮🇳",
+//   },
+//   {
+//     city: "Dubai (Sales)",
+//     address: "DIFC, Gate Avenue, Dubai, UAE",
+//     phone: "+971 50 000 0000",
+//     email: "dubai@triaxon.tech",
+//     flag: "🇦🇪",
+//   },
+//   {
+//     city: "London (Sales)",
+//     address: "WeWork, 1 Poultry, London EC2R 8EJ",
+//     phone: "+44 20 0000 0000",
+//     email: "london@triaxon.tech",
+//     flag: "🇬🇧",
+//   },
+// ];
 
 export default function ContactPage() {
   const [form, setForm] = useState({
