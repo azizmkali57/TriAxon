@@ -52,6 +52,7 @@ const services = [
 
 const mainLinks = [
   { label: "Services", href: "/services" },
+  { label: "PACKAGES", href: "/packages" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },

@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/header/Navbar";
 import Footer from "@/components/layout/footer/Footer";
-import AboutSection from "@/components/pages/home/Aboutsection";
+// import AboutSection from "@/components/pages/home/Aboutsection";
 import BlogSection from "@/components/pages/home/Blogsection";
 import ContactSection from "@/components/pages/home/Contactsection";
 import CTABanner from "@/components/pages/home/Ctabanner";
@@ -17,7 +17,7 @@ export default function HomePage() {
     <div>
       <Navbar />
       <HeroSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <PortfolioGrid />
       <ProcessTimeline />
       <StatsCounter />
