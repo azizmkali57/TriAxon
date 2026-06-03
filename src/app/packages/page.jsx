@@ -102,7 +102,7 @@ const packageCategories = {
   ai: [
     {
       name: "AI Chatbot",
-      price: "Starting from ₹45,000",
+      price: " ₹14,999",
       desc: "AI assistants and conversational AI solutions.",
       popular: false,
       features: [
@@ -116,7 +116,7 @@ const packageCategories = {
     },
     {
       name: "AI Automation",
-      price: "Starting from ₹95,000",
+      price: "₹24,999",
       desc: "Automate workflows and operations using intelligent systems.",
       popular: true,
       features: [
@@ -130,7 +130,7 @@ const packageCategories = {
     },
     {
       name: "Enterprise AI",
-      price: "Custom Quote",
+      price: "₹39,999",
       desc: "Private AI systems and enterprise-grade AI infrastructure.",
       popular: false,
       features: [
@@ -144,50 +144,6 @@ const packageCategories = {
     },
   ],
 
-  software: [
-    {
-      name: "Custom Platform",
-      price: "Starting from ₹85,000",
-      desc: "Tailored software for unique business requirements.",
-      popular: false,
-      features: [
-        "Custom Dashboard",
-        "Database",
-        "Business Logic",
-        "Integrations",
-        "Testing",
-        "Support",
-      ],
-    },
-    {
-      name: "ERP / CRM",
-      price: "Starting from ₹2L",
-      desc: "Business systems to streamline operations and management.",
-      popular: true,
-      features: [
-        "ERP / CRM",
-        "Reports",
-        "Permissions",
-        "Automation",
-        "Deployment",
-        "Priority Support",
-      ],
-    },
-    {
-      name: "Enterprise System",
-      price: "Custom Quote",
-      desc: "Mission-critical enterprise-grade software systems.",
-      popular: false,
-      features: [
-        "Dedicated Team",
-        "Enterprise Architecture",
-        "High Security",
-        "Cloud Infra",
-        "Maintenance",
-        "Priority Support",
-      ],
-    },
-  ],
 };
 
 export default function PackagesPage() {
@@ -259,7 +215,7 @@ export default function PackagesPage() {
               ["website", "Website Development"],
               ["app", "App Development"],
               ["ai", "AI Solutions"],
-              ["software", "Custom Software"],
+              
             ].map(([key, label]) => (
               <button
                 key={key}

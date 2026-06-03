@@ -39,12 +39,12 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <Image
-              src="/logo.png"
+              src="/logos.png"
               alt="TriAxon Technologies"
-              width={140}
-              height={40}
+              width={540}
+              height={340}
               priority
-              className="h-9 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
