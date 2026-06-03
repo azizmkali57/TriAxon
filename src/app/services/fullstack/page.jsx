@@ -1,6 +1,30 @@
 import Link from "next/link";
-import Navbar from "@/components/layout/header/Navbar";
+import Image from "next/image";
+import {
+  FiArrowRight,
+  FiCode,
+  FiLayout,
+  FiDatabase,
+  FiServer,
+  FiGitMerge,
+  FiCheckCircle,
+  FiZap,
+  FiClock,
+  FiStar,
+  FiPackage,
+  FiShoppingCart,
+  FiTool,
+  FiUsers,
+  FiGlobe,
+  FiLayers,
+  FiShield,
+  FiBarChart2,
+  FiCreditCard,
+  FiSearch,
+  FiMonitor,
+} from "react-icons/fi";
 import Footer from "@/components/layout/footer/Footer";
+import Navbar from "@/components/layout/header/Navbar";
 
 export const metadata = {
   title: "Full-Stack Web Development | TriAxon Technologies",
@@ -8,364 +32,549 @@ export const metadata = {
     "High-performance web applications engineered for scale. Next.js, Node.js, PostgreSQL — from MVPs to enterprise SaaS.",
 };
 
+/* =======================
+         DATA
+======================= */
+
+const stats = [
+  { value: "150+", label: "Web Apps Delivered", icon: FiMonitor },
+  { value: "99%",  label: "On-Time Delivery",   icon: FiCheckCircle },
+  { value: "90+",  label: "Lighthouse Score",   icon: FiZap },
+  { value: "60d",  label: "Free Post-Launch Support", icon: FiStar },
+];
+
 const techStack = [
-  { category: "Frontend", items: ["Next.js 14", "React 18", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux Toolkit"] },
-  { category: "Backend",  items: ["Node.js", "Express", "NestJS", "GraphQL", "REST APIs", "WebSockets"] },
-  { category: "Database", items: ["PostgreSQL", "MongoDB", "Redis", "Prisma ORM", "Supabase", "MySQL"] },
-  { category: "DevOps",   items: ["Docker", "Vercel", "AWS", "CI/CD", "GitHub Actions", "Nginx"] },
+  {
+    category: "Frontend",
+    icon: FiLayout,
+    items: ["Next.js 14", "React 18", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux Toolkit"],
+  },
+  {
+    category: "Backend",
+    icon: FiServer,
+    items: ["Node.js", "Express", "NestJS", "GraphQL", "REST APIs", "WebSockets"],
+  },
+  {
+    category: "Database",
+    icon: FiDatabase,
+    items: ["PostgreSQL", "MongoDB", "Redis", "Prisma ORM", "Supabase", "MySQL"],
+  },
+  {
+    category: "DevOps",
+    icon: FiGitMerge,
+    items: ["Docker", "Vercel", "AWS", "CI/CD", "GitHub Actions", "Nginx"],
+  },
+];
+
+const whatWeBuild = [
+  {
+    icon: FiLayers,
+    title: "SaaS Platforms",
+    desc: "Multi-tenant architecture, subscription billing, team management, and API integrations.",
+    gradient: "from-blue-500/10",
+  },
+  {
+    icon: FiShoppingCart,
+    title: "E-Commerce Stores",
+    desc: "Custom storefronts, inventory management, payment gateways, and order fulfillment flows.",
+    gradient: "from-cyan-500/10",
+  },
+  {
+    icon: FiBarChart2,
+    title: "Internal Tools & Dashboards",
+    desc: "Admin panels, analytics dashboards, CRMs, and workflow automation tools.",
+    gradient: "from-indigo-500/10",
+  },
+  {
+    icon: FiUsers,
+    title: "Marketplaces",
+    desc: "Two-sided platforms with buyer/seller flows, escrow payments, and reputation systems.",
+    gradient: "from-violet-500/10",
+  },
+  {
+    icon: FiGlobe,
+    title: "Landing Pages & Portals",
+    desc: "High-converting landing pages, customer portals, and marketing microsites.",
+    gradient: "from-teal-500/10",
+  },
+  {
+    icon: FiTool,
+    title: "Legacy Modernisation",
+    desc: "Refactors, migrations, and feature additions on existing codebases — free code audit first.",
+    gradient: "from-purple-500/10",
+  },
 ];
 
 const process = [
-  { step: "01", title: "Discovery & Architecture", desc: "We audit your requirements, map user flows, and design a scalable system architecture before writing a single line of code." },
-  { step: "02", title: "UI/UX Design",             desc: "Figma-based wireframes and high-fidelity prototypes. You approve every screen before development begins." },
-  { step: "03", title: "Agile Development",         desc: "Two-week sprints with daily standups, weekly demos on a live staging URL, and full transparency throughout." },
-  { step: "04", title: "QA & Performance",          desc: "Lighthouse scores 90+, cross-browser testing, load testing, and end-to-end automated test suites." },
-  { step: "05", title: "Launch & Handoff",          desc: "Zero-downtime deployment, full source code handoff, comprehensive docs, and 60 days post-launch support." },
+  {
+    step: "01",
+    title: "Discovery & Architecture",
+    desc: "We audit your requirements, map user flows, and design a scalable system architecture before writing a single line of code.",
+  },
+  {
+    step: "02",
+    title: "UI/UX Design",
+    desc: "Figma-based wireframes and high-fidelity prototypes. You approve every screen before development begins.",
+  },
+  {
+    step: "03",
+    title: "Agile Development",
+    desc: "Two-week sprints with daily standups, weekly demos on a live staging URL, and full transparency throughout.",
+  },
+  {
+    step: "04",
+    title: "QA & Performance",
+    desc: "Lighthouse scores 90+, cross-browser testing, load testing, and end-to-end automated test suites.",
+  },
+  {
+    step: "05",
+    title: "Launch & Handoff",
+    desc: "Zero-downtime deployment, full source code handoff, comprehensive docs, and 60 days post-launch support.",
+  },
 ];
 
 const deliverables = [
-  "Fully responsive web application",
-  "Admin dashboard & CMS",
-  "RESTful or GraphQL API",
-  "Authentication & role-based access",
-  "Payment gateway integration",
-  "SEO-optimised architecture",
-  "Analytics & error monitoring",
-  "Complete source code & docs",
+  { label: "Fully responsive web application",   icon: FiMonitor },
+  { label: "Admin dashboard & CMS",              icon: FiBarChart2 },
+  { label: "RESTful or GraphQL API",             icon: FiServer },
+  { label: "Authentication & role-based access", icon: FiShield },
+  { label: "Payment gateway integration",        icon: FiCreditCard },
+  { label: "SEO-optimised architecture",         icon: FiSearch },
+  { label: "Analytics & error monitoring",       icon: FiZap },
+  { label: "Complete source code & docs",        icon: FiPackage },
 ];
+
+// const caseStudies = [
+//   {
+//     title: "TimeCraft Watch Store",
+//     result: "43% conversion ↑",
+//     industry: "E-Commerce",
+//     imageSrc: "/site/watchproject.jpeg",
+//     stack: ["Next.js", "Tailwind CSS", "Shopify", "Figma"],
+//     desc: "Elegant product landing page for a premium watch brand — warm beige aesthetic with live pricing, spec tables, star-rated testimonials, and a high-converting sticky CTA section.",
+//     gradient: "from-blue-500/10",
+//     accent: "text-blue-300",
+//   },
+//   {
+//     title: "SoundCore Earbuds Page",
+//     result: "51% CTR on Buy Now",
+//     industry: "Consumer Tech",
+//     imageSrc: "/site/earbudsproject.jpeg",
+//     stack: ["Next.js", "GSAP", "Tailwind CSS", "Shopify"],
+//     desc: "Dark-luxury product page for a premium wireless earbuds brand — immersive black-and-gold hero, animated spec reveals, ENC feature highlights, and a bold sticky buy CTA.",
+//     gradient: "from-cyan-500/10",
+//     accent: "text-cyan-300",
+//   },
+// ];
 
 const faqs = [
-  { q: "How long does a typical web app take?", a: "Most MVPs take 6–10 weeks. Enterprise platforms range from 12–28 weeks depending on complexity. We'll give you an exact timeline in our proposal." },
-  { q: "Do you work with our existing codebase?", a: "Yes. We do legacy modernisation, refactors, and feature additions on existing codebases. We'll do a free code audit first." },
-  { q: "Who owns the code after launch?", a: "You do. 100%. We transfer all source code, credentials, and assets on day one of launch. No lock-in." },
-  { q: "Can you handle traffic spikes?", a: "Absolutely. We architect for auto-scaling from day one — load balancers, CDN, database read replicas, and caching layers." },
+  {
+    q: "How long does a typical web app take?",
+    a: "Most MVPs take 6–10 weeks. Enterprise platforms range from 12–28 weeks depending on complexity. We'll give you an exact timeline in our proposal.",
+  },
+  {
+    q: "Do you work with our existing codebase?",
+    a: "Yes. We do legacy modernisation, refactors, and feature additions on existing codebases. We'll do a free code audit first.",
+  },
+  {
+    q: "Who owns the code after launch?",
+    a: "You do. 100%. We transfer all source code, credentials, and assets on day one of launch. No lock-in.",
+  },
+  {
+    q: "Can you handle traffic spikes?",
+    a: "Absolutely. We architect for auto-scaling from day one — load balancers, CDN, database read replicas, and caching layers.",
+  },
 ];
 
-const caseStudies = [
-  {
-    title: "TimeCraft Watch Store",
-    result: "43% conversion ↑",
-    industry: "E-Commerce",
-    imageSrc: "/site/watchproject.jpeg",  
-    stack: ["Next.js", "Tailwind CSS", "Shopify", "Figma"],     
-    desc: "Elegant product landing page for a premium watch brand — warm beige aesthetic with live pricing, spec tables, star-rated testimonials, and a high-converting sticky CTA section."
-  },
-  {     
-    title: "SoundCore Earbuds Page",
-    imageSrc: "/site/earbudsproject.jpeg",
-    result: "51% CTR on Buy Now",
-    stack: ["Next.js", "GSAP", "Tailwind CSS", "Shopify"],
-    desc: "Dark-luxury product page for a premium wireless earbuds brand — immersive black-and-gold hero, animated spec reveals, ENC feature highlights, and a bold gold sticky buy CTA."
-  },
-];
+/* =======================
+        PAGE
+======================= */
 
 export default function FullStackPage() {
   return (
-    <main className="bg-[#0D1117] min-h-screen overflow-x-hidden">
+    <main className="bg-[#050B14] text-white overflow-x-hidden">
       <Navbar />
 
-      {/* ── HERO ── */}
-      <section className="relative pt-40 pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_-5%,rgba(43,126,193,0.15),transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_30%_40%_at_90%_20%,rgba(0,180,200,0.08),transparent)]" />
-        <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.6) 1px,transparent 1px)", backgroundSize: "50px 50px" }} />
+      {/* ========================
+              HERO
+      ======================== */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* breadcrumb */}
-          <div className="flex items-center gap-2 text-xs text-[#4B5563] mb-8">
-            <Link href="/" className="hover:text-[#9CA3AF] transition-colors">Home</Link>
+        <div className="absolute inset-0">
+          <div className="absolute w-[600px] h-[600px] bg-blue-500/10 blur-[160px] rounded-full top-[-200px] left-[-200px]" />
+          <div className="absolute w-[600px] h-[600px] bg-cyan-500/10 blur-[160px] rounded-full bottom-[-200px] right-[-200px]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 w-full relative z-10 pt-24">
+
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 text-xs text-slate-500 mb-10">
+            <Link href="/" className="hover:text-slate-300 transition">Home</Link>
             <span>/</span>
-            <Link href="/services" className="hover:text-[#9CA3AF] transition-colors">Services</Link>
+            <Link href="/services" className="hover:text-slate-300 transition">Services</Link>
             <span>/</span>
-            <span className="text-[#2B7EC1]">Full-Stack Web</span>
+            <span className="text-blue-400">Full-Stack Web</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* LEFT */}
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#2B7EC1]/30 bg-[#2B7EC1]/08 mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2B7EC1] animate-pulse" />
-                <span className="text-xs text-[#79b8f0] font-medium">Most Popular Service</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-300 text-sm mb-8">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+                Most Popular Service
               </div>
 
-              <h1 className="font-display font-extrabold text-5xl sm:text-6xl text-white leading-[1.06] mb-6">
-                Full-Stack{" "}
-                <span style={{ background: "linear-gradient(135deg,#2B7EC1,#00B4C8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+              <h1 className="text-5xl md:text-6xl xl:text-7xl font-black leading-[1.05]">
+                Full-Stack
+                <br />
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
                   Web Development
                 </span>
               </h1>
 
-              <p className="text-[#9CA3AF] text-lg leading-relaxed mb-8">
-                We build high-performance web applications engineered for scale — from lean MVPs that ship in 6 weeks to enterprise platforms handling millions of users. Every line of code is production-ready from day one.
+              <p className="text-slate-400 text-lg mt-8 max-w-xl">
+                We build high-performance web applications engineered for scale — from lean MVPs
+                that ship in 6 weeks to enterprise platforms handling millions of users.
+                Every line of code is production-ready from day one.
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-10">
+              {/* Tech pills */}
+              <div className="flex flex-wrap gap-2 mt-8">
                 {["Next.js", "Node.js", "PostgreSQL", "TypeScript", "AWS"].map((t) => (
-                  <span key={t} className="text-xs px-3 py-1.5 rounded-full bg-[#2B7EC1]/10 text-[#79b8f0] border border-[#2B7EC1]/20">{t}</span>
+                  <span
+                    key={t}
+                    className="text-xs px-3 py-1.5 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
+                  >
+                    {t}
+                  </span>
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white font-semibold text-sm hover:opacity-90 transition-opacity" style={{ background: "linear-gradient(135deg,#2B7EC1,#00B4C8)" }}>
-                  Start Your Project →
+              <div className="flex gap-4 mt-10 flex-wrap">
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 font-semibold flex items-center gap-2 hover:scale-105 transition"
+                >
+                  Start Your Project <FiArrowRight />
                 </Link>
-                <Link href="/portfolio" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-[#9CA3AF] font-semibold text-sm border border-white/10 hover:border-white/20 hover:text-white transition-all">
+
+                <Link
+                  href="/portfolio"
+                  className="px-8 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
+                >
                   View Case Studies
                 </Link>
               </div>
+
+              {/* STATS */}
+              <div className="grid grid-cols-2 gap-5 mt-14">
+                {stats.map((s) => {
+                  const Icon = s.icon;
+                  return (
+                    <div
+                      key={s.label}
+                      className="p-6 rounded-2xl border border-white/10 bg-white/[0.03]"
+                    >
+                      <Icon className="text-cyan-400 mb-4" size={22} />
+                      <div className="text-3xl font-bold">{s.value}</div>
+                      <div className="text-sm text-slate-400">{s.label}</div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
-            {/* HERO IMAGE SLOT */}
+            {/* RIGHT */}
             <div className="relative">
-              <div className="relative rounded-2xl border border-[#2B7EC1]/20 bg-[#0A1628] overflow-hidden aspect-[4/3] flex items-center justify-center">
-                {/* ── Replace this block with your <Image> component ── */}
-                <div className="text-center">
-                  <img src="/site/fullstack-hero.png" alt="Hero Image" className="w-full h-full object-cover" />
-                  {/* <div className="text-6xl mb-4">🖥️</div>
-                  <p className="text-[#4B5563] text-sm">Hero image goes here</p>
-                  <p className="text-[#374151] text-xs mt-1">Recommended: 800×600px</p> */}
-                </div>
-                {/* ─────────────────────────────────────────────────── */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1117]/60 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 blur-3xl rounded-full" />
+
+              <div className="relative border border-white/10 rounded-[30px] overflow-hidden bg-[#0B1320]">
+                <Image
+                  src="/site/fullstack-hero.png"
+                  alt="Full-Stack Web Development"
+                  width={1200}
+                  height={900}
+                  className="w-full"
+                  priority
+                />
               </div>
-              {/* floating stat cards */}
-              <div className="absolute -bottom-4 -left-4 bg-[#0A1628] border border-[#2B7EC1]/30 rounded-xl px-4 py-3">
-                <div className="text-2xl font-extrabold text-white">150+</div>
-                <div className="text-xs text-[#6B7280]">Apps Launched</div>
+
+              <div className="absolute -top-5 -left-5 bg-[#0B1320] border border-white/10 rounded-xl p-4">
+                <p className="text-xs text-slate-400">Apps Launched</p>
+                <p className="text-xl font-bold text-cyan-400">150+</p>
               </div>
-              <div className="absolute -top-4 -right-4 bg-[#0A1628] border border-[#00B4C8]/30 rounded-xl px-4 py-3">
-                <div className="text-2xl font-extrabold text-white">6 wks</div>
-                <div className="text-xs text-[#6B7280]">Avg. MVP Time</div>
+
+              <div className="absolute -bottom-5 right-0 bg-[#0B1320] border border-white/10 rounded-xl p-4">
+                <p className="text-xs text-slate-400">Avg. MVP Time</p>
+                <p className="text-xl font-bold text-blue-400">6 wks</p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* ── STATS BAR ── */}
-      <div className="border-y border-white/[0.05] bg-white/[0.01] py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: "150+", label: "Web Apps Delivered" },
-            { value: "99%",  label: "On-Time Delivery"  },
-            { value: "90+",  label: "Lighthouse Score"  },
-            { value: "60d",  label: "Free Post-Launch Support" },
-          ].map((s) => (
-            <div key={s.label} className="text-center">
-              <div className="text-3xl font-extrabold text-white mb-1">{s.value}</div>
-              <div className="text-xs text-[#6B7280] uppercase tracking-wider">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* ========================
+            TECH STACK
+      ======================== */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
 
-      {/* ── TECH STACK ── */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-xs font-mono text-[#2B7EC1] uppercase tracking-widest mb-3">Technology</p>
-            <h2 className="font-display font-bold text-4xl text-white mb-4">Our Tech Stack</h2>
-            <p className="text-[#6B7280] max-w-xl mx-auto">Battle-tested technologies chosen for performance, scalability, and long-term maintainability.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {techStack.map((cat) => (
-              <div key={cat.category} className="p-6 rounded-2xl border border-white/[0.07] bg-white/[0.02] hover:border-[#2B7EC1]/30 transition-all duration-300">
-                <h3 className="text-xs font-mono text-[#2B7EC1] uppercase tracking-widest mb-4">{cat.category}</h3>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold">Our Tech Stack</h2>
+          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+            Battle-tested technologies chosen for performance, scalability, and long-term maintainability.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {techStack.map((cat) => {
+            const Icon = cat.icon;
+            return (
+              <div
+                key={cat.category}
+                className="p-6 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition group"
+              >
+                <div className="flex items-center gap-2 mb-5">
+                  <Icon className="text-cyan-400" size={18} />
+                  <h3 className="text-xs font-mono text-cyan-400 uppercase tracking-widest">
+                    {cat.category}
+                  </h3>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {cat.items.map((item) => (
-                    <span key={item} className="text-xs px-2.5 py-1.5 rounded-lg bg-white/[0.04] text-[#9CA3AF] border border-white/[0.06]">{item}</span>
+                    <span
+                      key={item}
+                      className="text-xs px-2.5 py-1.5 rounded-lg bg-white/[0.04] text-slate-400 border border-white/[0.06]"
+                    >
+                      {item}
+                    </span>
                   ))}
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* ── WHAT WE BUILD ── */}
-      <section className="py-24 bg-[#080D14]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* IMAGE SLOT */}
-            <div className="rounded-2xl border border-white/[0.07] bg-[#0A1628] overflow-hidden aspect-[4/3] flex items-center justify-center order-2 lg:order-1">
-              {/* ── Replace with your <Image> component ── */}
-              <div className="text-center">
-                <img src="/site/fullstack-section.png" alt="Hero Image" className="w-full h-full object-cover" />
-                {/* <div className="text-5xl mb-3">⚙️</div>
-                <p className="text-[#4B5563] text-sm">Section image goes here</p>
-                <p className="text-[#374151] text-xs mt-1">Recommended: 700×525px</p> */}
-              </div>
-              {/* ─────────────────────────────────────── */}
-            </div>
+      {/* ========================
+            WHAT WE BUILD
+      ======================== */}
+      <section className="border-t border-white/10 py-24">
+        <div className="max-w-7xl mx-auto px-6">
 
-            <div className="order-1 lg:order-2">
-              <p className="text-xs font-mono text-[#00B4C8] uppercase tracking-widest mb-4">What We Build</p>
-              <h2 className="font-display font-bold text-4xl text-white mb-6">Every type of web product, engineered right</h2>
-              <div className="space-y-4">
-                {[
-                  { title: "SaaS Platforms",          desc: "Multi-tenant architecture, subscription billing, team management, and API integrations." },
-                  { title: "E-Commerce Stores",       desc: "Custom storefronts, inventory management, payment gateways, and order fulfillment flows." },
-                  { title: "Internal Tools & Dashboards", desc: "Admin panels, analytics dashboards, CRMs, and workflow automation tools." },
-                  { title: "Marketplaces",            desc: "Two-sided platforms with buyer/seller flows, escrow payments, and reputation systems." },
-                  { title: "Landing Pages & Portals", desc: "High-converting landing pages, customer portals, and marketing microsites." },
-                ].map((item) => (
-                  <div key={item.title} className="flex gap-4 p-4 rounded-xl border border-white/[0.05] bg-white/[0.02] hover:border-[#2B7EC1]/20 transition-all">
-                    <div className="w-5 h-5 rounded-full bg-[#2B7EC1]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-3 h-3 text-[#2B7EC1]" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>
-                      <p className="text-xs text-[#6B7280] leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PROCESS ── */}
-      <section className="py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-xs font-mono text-[#2B7EC1] uppercase tracking-widest mb-3">Our Process</p>
-            <h2 className="font-display font-bold text-4xl text-white mb-4">How We Build Your Product</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Every Type of Web Product, Engineered Right
+            </h2>
+            <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+              We don't build websites — we engineer digital products built for real business outcomes.
+            </p>
           </div>
-          <div className="space-y-4">
-            {process.map((p, i) => (
-              <div key={p.step} className="flex gap-6 p-6 rounded-2xl border border-white/[0.07] bg-white/[0.02] hover:border-[#2B7EC1]/20 transition-all duration-300 group">
-                <div className="text-3xl font-extrabold text-[#2B7EC1]/20 group-hover:text-[#2B7EC1]/40 transition-colors font-mono w-12 flex-shrink-0">{p.step}</div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2">{p.title}</h3>
-                  <p className="text-sm text-[#6B7280] leading-relaxed">{p.desc}</p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whatWeBuild.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br ${item.gradient} to-transparent hover:brightness-110 transition group`}
+                >
+                  <Icon className="text-white/50 mb-5 group-hover:text-white/70 transition" size={28} />
+                  <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ========================
+            PROCESS
+      ======================== */}
+      <section className="max-w-5xl mx-auto px-6 py-24">
+
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold">How We Build Your Product</h2>
+          <p className="text-slate-400 mt-4 max-w-xl mx-auto">
+            A structured, transparent process from first call to live deployment.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {process.map((p) => (
+            <div
+              key={p.step}
+              className="flex gap-6 p-6 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-blue-500/20 transition group"
+            >
+              <div className="text-3xl font-black text-blue-500/20 group-hover:text-blue-500/50 transition font-mono w-12 shrink-0">
+                {p.step}
+              </div>
+              <div>
+                <h3 className="font-semibold text-white mb-2">{p.title}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{p.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </section>
+
+      {/* ========================
+            DELIVERABLES
+      ======================== */}
+      <section className="border-t border-white/10 py-24">
+        <div className="max-w-5xl mx-auto px-6">
+
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold">Everything Included, Nothing Hidden</h2>
+            <p className="text-slate-400 mt-4 max-w-xl mx-auto">
+              Every engagement includes a complete set of deliverables. No surprise add-ons, no nickel-and-diming.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            {deliverables.map((d) => {
+              const Icon = d.icon;
+              return (
+                <div
+                  key={d.label}
+                  className="flex items-center gap-4 p-5 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition"
+                >
+                  <Icon className="text-cyan-400 shrink-0" size={18} />
+                  <span className="text-sm text-slate-300">{d.label}</span>
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ========================
+            CASE STUDIES
+      ======================== */}
+      {/* <section className="max-w-7xl mx-auto px-6 py-24">
+
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold">Real Projects, Real Results</h2>
+          <p className="text-slate-400 mt-4 max-w-xl mx-auto">
+            From product pages to full SaaS platforms — shipped and converting.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {caseStudies.map((cs) => (
+            <div
+              key={cs.title}
+              className="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden hover:border-blue-500/30 transition group"
+            >
+              <div className="aspect-[16/9] bg-[#0B1320] overflow-hidden">
+                <Image
+                  src={cs.imageSrc}
+                  alt={cs.title}
+                  width={800}
+                  height={450}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
+
+              <div className="p-7">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs text-slate-500">{cs.industry}</span>
+                  <span className={`text-xs px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 ${cs.accent}`}>
+                    {cs.result}
+                  </span>
+                </div>
+                <h3 className="font-bold text-white text-xl mb-2">{cs.title}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed mb-5">{cs.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {cs.stack.map((t) => (
+                    <span key={t} className="text-xs px-2.5 py-1 rounded-lg bg-white/[0.04] text-slate-500 border border-white/[0.06]">
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── DELIVERABLES ── */}
-      <section className="py-24 bg-[#080D14]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-xs font-mono text-[#2B7EC1] uppercase tracking-widest mb-4">Deliverables</p>
-              <h2 className="font-display font-bold text-4xl text-white mb-6">Everything included, nothing hidden</h2>
-              <p className="text-[#9CA3AF] leading-relaxed mb-8">Every engagement includes a complete set of deliverables. No surprise add-ons, no nickel-and-diming.</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {deliverables.map((d) => (
-                  <div key={d} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#2B7EC1]/20 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-[#2B7EC1]" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-sm text-[#9CA3AF]">{d}</span>
-                  </div>
-                ))}
-              </div>
             </div>
-            {/* IMAGE SLOT */}
-            <div className="rounded-2xl border border-white/[0.07] bg-[#0D1117] overflow-hidden aspect-[4/3] flex items-center justify-center">
-              {/* ── Replace with your <Image> component ── */}
-              <div className="text-center">
-                <img src="/site/fullstack-section2.png" alt="Deliverables Image" className="w-full h-full object-cover" />
-                {/* <div className="text-5xl mb-3">📦</div>
-                <p className="text-[#4B5563] text-sm">Deliverables image goes here</p>
-                <p className="text-[#374151] text-xs mt-1">Recommended: 700×525px</p> */}
-              </div>
-              {/* ─────────────────────────────────────── */}
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
 
-      {/* ── CASE STUDIES ── */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-xs font-mono text-[#2B7EC1] uppercase tracking-widest mb-3">Case Studies</p>
-            <h2 className="font-display font-bold text-4xl text-white mb-4">Real Projects, Real Results</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {caseStudies.map((cs) => (
-              <div key={cs.title} className="rounded-2xl border border-white/[0.07] bg-white/[0.02] overflow-hidden hover:border-[#2B7EC1]/30 transition-all duration-300 group">
-                {/* CASE STUDY IMAGE SLOT */}
-                <div className="aspect-[16/9] bg-[#0A1628] flex items-center justify-center border-b border-white/[0.05]">
-                  {/* ── Replace with <Image src={cs.image} ... /> ── */}
-                  <div className="text-center">
-                    <img src={cs.imageSrc} alt={cs.title} className="w-full h-full object-cover" />
-                  </div>
-                  {/* ──────────────────────────────────────────── */}
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs text-[#6B7280]">{cs.industry}</span>
-                    <span className="text-xs px-2.5 py-1 rounded-full bg-[#2B7EC1]/10 text-[#79b8f0] border border-[#2B7EC1]/20">{cs.result}</span>
-                  </div>
-                  <h3 className="font-bold text-white text-lg mb-2">{cs.title}</h3>
-                  <p className="text-sm text-[#6B7280] leading-relaxed mb-4">{cs.desc}</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {cs.stack.map((t) => (
-                      <span key={t} className="text-xs px-2 py-1 rounded bg-white/[0.04] text-[#6B7280]">{t}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm text-[#2B7EC1] hover:text-[#00B4C8] transition-colors font-medium">
-              View All Case Studies →
-            </Link>
-          </div>
+        <div className="text-center mt-10">
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-cyan-400 transition font-medium"
+          >
+            View All Case Studies <FiArrowRight size={14} />
+          </Link>
         </div>
-      </section>
 
-      {/* ── FAQ ── */}
-      <section className="py-24 bg-[#080D14]">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      </section> */}
+
+      {/* ========================
+               FAQ
+      ======================== */}
+      <section className="border-t border-white/10 py-24">
+        <div className="max-w-3xl mx-auto px-6">
+
           <div className="text-center mb-16">
-            <p className="text-xs font-mono text-[#2B7EC1] uppercase tracking-widest mb-3">FAQ</p>
-            <h2 className="font-display font-bold text-4xl text-white mb-4">Common Questions</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">Common Questions</h2>
           </div>
+
           <div className="space-y-4">
             {faqs.map((faq) => (
-              <div key={faq.q} className="p-6 rounded-2xl border border-white/[0.07] bg-white/[0.02]">
+              <div
+                key={faq.q}
+                className="p-7 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.05] transition"
+              >
                 <h3 className="font-semibold text-white mb-3">{faq.q}</h3>
-                <p className="text-sm text-[#6B7280] leading-relaxed">{faq.a}</p>
+                <p className="text-sm text-slate-400 leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_50%_50%,rgba(43,126,193,0.12),transparent)]" />
-        <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white mb-5">
-            Ready to build your{" "}
-            <span style={{ background: "linear-gradient(90deg,#2B7EC1,#00B4C8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-              web application?
+      {/* ========================
+              CTA
+      ======================== */}
+      <section className="border-t border-white/10 py-24">
+        <div className="max-w-4xl mx-auto text-center px-6">
+
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Ready to Build Your{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Web Application?
             </span>
           </h2>
-          <p className="text-[#9CA3AF] text-lg mb-10">Get a free technical consultation and fixed-price quote within 48 hours.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-white font-semibold text-base hover:opacity-90 transition-opacity" style={{ background: "linear-gradient(135deg,#2B7EC1,#00B4C8)" }}>
-              Get Free Quote →
+
+          <p className="text-slate-400 mt-6">
+            Get a free technical consultation and fixed-price quote within 48 hours.
+          </p>
+
+          <div className="flex justify-center gap-4 mt-10 flex-wrap">
+            <Link
+              href="/contact"
+              className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 font-semibold flex items-center gap-2 hover:scale-105 transition"
+            >
+              Get Free Quote <FiArrowRight />
             </Link>
-            <Link href="/services" className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-[#9CA3AF] font-semibold text-base border border-white/10 hover:border-white/20 hover:text-white transition-all">
-              ← All Services
+
+            <Link
+              href="/services"
+              className="px-8 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
+            >
+              Explore More Services
             </Link>
           </div>
+
         </div>
       </section>
 
       <Footer />
     </main>
   );
-}
+} 

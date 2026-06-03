@@ -152,7 +152,7 @@ export default function AiMlPage() {
               <div className="relative border border-white/10 rounded-[30px] overflow-hidden bg-[#0B1320]">
 
                 <Image
-                  src="/images/ai/hero-ai.webp"
+                  src="/site/ai-ml-section.png"
                   alt="AI Systems"
                   width={1200}
                   height={900}
